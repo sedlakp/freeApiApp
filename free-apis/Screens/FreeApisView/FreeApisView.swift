@@ -11,12 +11,14 @@ struct FreeApisView: View {
     
     @ObservedObject private var vm = FreeApisVM()
     
+    var category: String?
+    
     var body: some View {
         
         List(vm.freeApis, id: \.self) { api in
             FreeApiCellView(freeApi: api)
         }.onAppear {
-            vm.getEntries()
+            vm.getEntries(for: category)
         }
     }
 }

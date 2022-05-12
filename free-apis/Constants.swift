@@ -13,11 +13,12 @@ let BaseApiURL = "https://api.publicapis.org"
 enum ApiPaths: CustomStringConvertible {
     
     case entries
+    case cateogires
     
     var description: String {
         switch self {
-        case .entries:
-            return "/entries"
+        case .entries:              return "/entries"
+        case .cateogires:           return "/categories"
         }
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct free_apisApp: App {
     var body: some Scene {
         WindowGroup {
-            FreeApisView()
+            CategoriesView()
         }
     }
 }
