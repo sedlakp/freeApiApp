@@ -12,7 +12,16 @@ struct FreeApiCellView: View {
     let freeApi: FreeApi
     
     var body: some View {
-        Text(freeApi.API)
+        VStack(alignment: .leading) {
+            HStack{
+                Text(freeApi.API).font(Font.system(size: 14))
+                Spacer()
+                Text(freeApi.Category).frame(alignment: .trailing).font(Font.system(size: 14))
+            }
+            Text(freeApi.Description).font(Font.system(size: 8))
+                //.lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: true)
+        }.padding()
     }
 }
 
