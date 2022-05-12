@@ -14,12 +14,16 @@ struct FreeApisView: View {
     var category: String?
     
     var body: some View {
-        
-        List(vm.freeApis, id: \.self) { api in
-            FreeApiCellView(freeApi: api)
-        }.onAppear {
-            vm.getEntries(for: category)
+        if vm.freeApis.isEmpty {
+            ProgressView().onAppear {
+                vm.getEntries(for: category)
+            }.navigationTitle(category ?? "Free APIs")
+        } else {
+            List(vm.freeApis, id: \.self) { api in
+                FreeApiCellView(freeApi: api)
+            }.navigationTitle(category ?? "Free APIs")
         }
+
     }
 }
 

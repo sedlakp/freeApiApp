@@ -13,13 +13,18 @@ struct CategoriesView: View {
     
     var body: some View {
         NavigationView{
-            List(vm.categories, id: \.self) { category in
-                NavigationLink(destination: FreeApisView(category: category)) {
-                    Text(category)
-                }
-                
-            }.onAppear {
-                vm.getCategories()
+            
+            if vm.categories.isEmpty {
+                ProgressView().onAppear {
+                    vm.getCategories()
+                }.navigationTitle("Categories")
+            } else {
+                List(vm.categories, id: \.self) { category in
+                    NavigationLink(destination: FreeApisView(category: category)) {
+                        Text(category)
+                    }
+                    
+                }.navigationTitle("Categories")//.navigationBarTitleDisplayMode(.inline)
             }
         }
     }
