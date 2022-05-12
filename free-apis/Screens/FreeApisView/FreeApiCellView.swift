@@ -18,9 +18,14 @@ struct FreeApiCellView: View {
                 Spacer()
                 Text(freeApi.Category).frame(alignment: .trailing).font(Font.system(size: 14))
             }
-            Text(freeApi.Description).font(Font.system(size: 8))
+            HStack {
+                Text(freeApi.Description).font(Font.system(size: 8))
                 //.lineLimit(nil)
-                .fixedSize(horizontal: false, vertical: true)
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer()
+                Link("Visit", destination: URL(string: freeApi.Link)!)
+
+            }
         }.padding()
     }
 }

@@ -46,12 +46,13 @@ class FreeApisVM: ObservableObject {
         } else {
             requestURL = URL(string: "\(BaseApiURL)\(ApiPaths.entries)")!
         }
-        
+        print(requestURL)
         getEntriesTask = URLSession.shared.dataTaskPublisher(for: requestURL)
             .map { $0.data }
             .decode(type: FreeApisWrap.self, decoder: JSONDecoder())
             .map{ $0.entries }
             .replaceError(with: [])
+            .print("1>")
             .eraseToAnyPublisher()
             .receive(on: RunLoop.main)
             .assign(to: \Self.freeApis, on: self)
