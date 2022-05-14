@@ -25,6 +25,7 @@
 		BBFF6683282E7EC300C68F6A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF6682282E7EC300C68F6A /* RealmSwift */; };
 		BBFF6686282E80BA00C68F6A /* FavoriteApisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6685282E80BA00C68F6A /* FavoriteApisView.swift */; };
 		BBFF6688282E80CB00C68F6A /* FavoriteApisVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6687282E80CB00C68F6A /* FavoriteApisVM.swift */; };
+		BBFF668A282FAE5500C68F6A /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6689282FAE5500C68F6A /* RealmService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		BBFF667C282D290700C68F6A /* CategoriesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVM.swift; sourceTree = "<group>"; };
 		BBFF6685282E80BA00C68F6A /* FavoriteApisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteApisView.swift; sourceTree = "<group>"; };
 		BBFF6687282E80CB00C68F6A /* FavoriteApisVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteApisVM.swift; sourceTree = "<group>"; };
+		BBFF6689282FAE5500C68F6A /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				BBFF6641282D12E100C68F6A /* free_apisApp.swift */,
 				BBFF6672282D153A00C68F6A /* Constants.swift */,
+				BBFF6689282FAE5500C68F6A /* RealmService.swift */,
 				BBFF666E282D145900C68F6A /* Screens */,
 				BBFF666B282D133E00C68F6A /* Models */,
 				BBFF6645282D12E400C68F6A /* Assets.xcassets */,
@@ -342,6 +345,7 @@
 				BBFF6688282E80CB00C68F6A /* FavoriteApisVM.swift in Sources */,
 				BBFF6671282D147A00C68F6A /* FreeApisVM.swift in Sources */,
 				BBFF6675282D1A6300C68F6A /* FreeApiCellView.swift in Sources */,
+				BBFF668A282FAE5500C68F6A /* RealmService.swift in Sources */,
 				BBFF6679282D223700C68F6A /* CategoriesWrapper.swift in Sources */,
 				BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */,
 				BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */,

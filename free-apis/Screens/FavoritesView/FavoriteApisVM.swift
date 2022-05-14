@@ -12,10 +12,5 @@ import SwiftUI
 
 class FavoriteApisVM: ObservableObject, DynamicProperty {
     
-//    @ObservedResults(FreeApiRLM.self) var favoritedApis
-//    
-//    func unFavorite(at index: IndexSet) {
-//            $favoritedApis.remove(atOffsets: index)
-//    }
     
 }
