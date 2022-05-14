@@ -14,10 +14,16 @@ struct FavoriteApisView: View {
     var rs = RealmService()
     
     var body: some View {
-       List {
-           ForEach(rs.favoritedAPIs) { api in
-               Text(api.API)
-           }.onDelete(perform: rs.unFavorite)
+       NavigationView {
+           List {
+               ForEach(rs.favoritedAPIs) { api in
+                   FreeApiCellView(freeApi: api.toNonRLM())
+                       .buttonStyle(PlainButtonStyle()) // this makes the cell non selectable, only the buttons are touchable
+               }.onDelete(perform: rs.unFavorite)
+           }
+           .navigationTitle("Favorites")
+           .navigationBarTitleDisplayMode(.inline)
+           
        }
     }
 }

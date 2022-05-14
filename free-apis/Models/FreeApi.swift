@@ -66,6 +66,10 @@ class FreeApiRLM: Object, ObjectKeyIdentifiable, Decodable {
         self.Category = api.Category
     }
     
+    func toNonRLM() -> FreeApi {
+        return FreeApi(API: self.API, Description: self.Description, Auth: self.Auth, HTTPS: self.HTTPS, Cors: self.Cors, Link: self.Link, Category: self.Category)
+    }
+    
    // static let ExampleApi = FreeApi(API: "Test", Description: "Description", Auth: "what", HTTPS: true, Cors: "idk what this is", Link: "somelink.com", Category: "Dogs")
     
 //    static let ExampleApi: FreeApi = {
