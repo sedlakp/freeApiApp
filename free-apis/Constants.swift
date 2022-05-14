@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 let BaseApiURL = "https://api.publicapis.org"
 
 enum ApiPaths: CustomStringConvertible {

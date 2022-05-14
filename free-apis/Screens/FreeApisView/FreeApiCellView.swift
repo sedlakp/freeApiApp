@@ -16,21 +16,41 @@ struct FreeApiCellView: View {
             HStack{
                 Text(freeApi.API).font(Font.system(size: 14))
                 Spacer()
-                Text(freeApi.Category).frame(alignment: .trailing).font(Font.system(size: 14))
+                ZStack {
+                    Capsule(style: .circular).foregroundColor(.teal)
+                    Text(freeApi.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.system(size: 12)).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
             }
             HStack {
-                Text(freeApi.Description).font(Font.system(size: 8))
+                Text(freeApi.Description).font(Font.system(size: 11))
+                    .foregroundColor(.gray)
                 //.lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
+            }.padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+            HStack {
+                Button {
+                    vm.addToFavorites(freeApi)
+                } label: {
+//                    ZStack {
+//                        Circle().foregroundColor(.indigo)
+//                            .frame(width: 40, height: 40)
+//                        Image(systemName: "heart.fill").foregroundColor(.white)
+//                    }
+                    Image(systemName: "heart.circle.fill")
+                        .resizable()
+                        .foregroundColor(.indigo)
+                        .frame(width: 40, height: 40)
+                }.buttonStyle(PlainButtonStyle())
+                
                 Spacer()
-                Link("Visit", destination: URL(string: freeApi.Link)!).buttonStyle(PlainButtonStyle())
-
+                
+                Link(destination: URL(string: freeApi.Link)!) {
+                    Image(systemName: "link.circle.fill")
+                        .resizable()
+                        .foregroundColor(.orange)
+                        .frame(width: 40, height: 40)
+                }
             }
-            Button {
-                vm.addToFavorites(freeApi)
-            } label: {
-                Text("Add to favorites")
-            }.buttonStyle(PlainButtonStyle())
 
         }.padding()
     }

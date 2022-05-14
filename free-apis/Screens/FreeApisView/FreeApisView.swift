@@ -21,6 +21,7 @@ struct FreeApisView: View {
         } else {
             List(vm.freeApis, id: \.self) { api in
                 FreeApiCellView(freeApi: api)
+                    .buttonStyle(PlainButtonStyle())
             }.navigationTitle(category ?? "Free APIs")
                 .environmentObject(vm)
         }

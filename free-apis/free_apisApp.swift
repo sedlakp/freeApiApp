@@ -12,6 +12,10 @@ struct free_apisApp: App {
     
     @State var selection = 0 //to prevent switch of tab after refresh of a view on a non first tab
     
+    init() {
+        UINavigationBar.appearance().tintColor = .black
+    }
+    
     var body: some Scene {
         WindowGroup {
             TabView(selection: $selection) {

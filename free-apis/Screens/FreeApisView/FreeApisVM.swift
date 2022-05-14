@@ -22,7 +22,12 @@ class FreeApisVM: ObservableObject {
     
     
     func addToFavorites(_ api: FreeApi) {
-        $favoritedAPIs.append(api.toRLM())
+        // check if the thing is already in favorites
+        
+        if favoritedAPIs.filter({$0.API == api.API}).isEmpty {
+            $favoritedAPIs.append(api.toRLM())
+        }
+        
     }
     
     // - MARK: Request to get all free api entries
