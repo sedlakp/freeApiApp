@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import RealmSwift
 
 class FreeApisVM: ObservableObject {
     
@@ -16,6 +17,13 @@ class FreeApisVM: ObservableObject {
     
     private var getEntriesTask: AnyCancellable?
    // private var getCategoryEntriesTask: AnyCancellable?
+    
+    @ObservedResults(FreeApiRLM.self) var favoritedAPIs
+    
+    
+    func addToFavorites(_ api: FreeApi) {
+        $favoritedAPIs.append(api.toRLM())
+    }
     
     // - MARK: Request to get all free api entries
     

@@ -21,6 +21,9 @@ struct free_apisApp: App {
                 FreeApisView().tabItem {
                     Label("All", systemImage: "figure.wave")
                         }.tag(1)
+                FavoriteApisView().tabItem {
+                    Label("Favorited", systemImage: "star")
+                        }.tag(2)
             }
         }
     }

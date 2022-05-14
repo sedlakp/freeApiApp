@@ -22,6 +22,7 @@ struct FreeApisView: View {
             List(vm.freeApis, id: \.self) { api in
                 FreeApiCellView(freeApi: api)
             }.navigationTitle(category ?? "Free APIs")
+                .environmentObject(vm)
         }
 
     }

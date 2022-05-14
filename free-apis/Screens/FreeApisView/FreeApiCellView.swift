@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FreeApiCellView: View {
-    
+    @EnvironmentObject var vm: FreeApisVM
     let freeApi: FreeApi
     
     var body: some View {
@@ -23,9 +23,15 @@ struct FreeApiCellView: View {
                 //.lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
                 Spacer()
-                Link("Visit", destination: URL(string: freeApi.Link)!)
+                Link("Visit", destination: URL(string: freeApi.Link)!).buttonStyle(PlainButtonStyle())
 
             }
+            Button {
+                vm.addToFavorites(freeApi)
+            } label: {
+                Text("Add to favorites")
+            }.buttonStyle(PlainButtonStyle())
+
         }.padding()
     }
 }
@@ -33,5 +39,6 @@ struct FreeApiCellView: View {
 struct FreeApiCellView_Previews: PreviewProvider {
     static var previews: some View {
         FreeApiCellView(freeApi: FreeApi.ExampleApi)
+            .environmentObject(FreeApisVM())
     }
 }
