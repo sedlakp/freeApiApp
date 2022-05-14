@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 import RealmSwift
 
-class FreeApisVM: ObservableObject {
+class FreeApisVM: ObservableObject, DynamicProperty {
     
     @Published var freeApis: [FreeApi] = []
     //@Published var categoryFreeApis: [FreeApi] = [] // I can probably reuse freeApis but this makes it more clear
@@ -18,17 +18,17 @@ class FreeApisVM: ObservableObject {
     private var getEntriesTask: AnyCancellable?
    // private var getCategoryEntriesTask: AnyCancellable?
     
-    @ObservedResults(FreeApiRLM.self) var favoritedAPIs
-    
-    
-    func addToFavorites(_ api: FreeApi) {
-        // check if the thing is already in favorites
-        
-        if favoritedAPIs.filter({$0.API == api.API}).isEmpty {
-            $favoritedAPIs.append(api.toRLM())
-        }
-        
-    }
+//    @ObservedResults(FreeApiRLM.self) var favoritedAPIs
+//    
+//    
+//    func addToFavorites(_ api: FreeApi) {
+//        // check if the thing is already in favorites
+//        
+//        if favoritedAPIs.filter({$0.API == api.API}).isEmpty {
+//            $favoritedAPIs.append(api.toRLM())
+//        }
+//        
+//    }
     
     // - MARK: Request to get all free api entries
     

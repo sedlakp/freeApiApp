@@ -8,13 +8,14 @@
 import Foundation
 import Combine
 import RealmSwift
+import SwiftUI
 
-class FavoriteApisVM: ObservableObject {
+class FavoriteApisVM: ObservableObject, DynamicProperty {
     
-    @ObservedResults(FreeApiRLM.self) var favoritedApis
-    
-    func unFavorite(at index: IndexSet) {
-            $favoritedApis.remove(atOffsets: index)
-    }
+//    @ObservedResults(FreeApiRLM.self) var favoritedApis
+//    
+//    func unFavorite(at index: IndexSet) {
+//            $favoritedApis.remove(atOffsets: index)
+//    }
     
 }

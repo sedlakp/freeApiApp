@@ -11,11 +11,13 @@ struct FavoriteApisView: View {
     
     @ObservedObject var vm = FavoriteApisVM()
     
+    var rs = RealmService()
+    
     var body: some View {
        List {
-           ForEach(vm.favoritedApis) { api in
+           ForEach(rs.favoritedAPIs) { api in
                Text(api.API)
-           }.onDelete(perform: vm.unFavorite)
+           }.onDelete(perform: rs.unFavorite)
        }
     }
 }

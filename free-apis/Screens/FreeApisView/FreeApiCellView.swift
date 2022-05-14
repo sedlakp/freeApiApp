@@ -9,6 +9,9 @@ import SwiftUI
 
 struct FreeApiCellView: View {
     @EnvironmentObject var vm: FreeApisVM
+    
+    var rs = RealmService()
+    
     let freeApi: FreeApi
     
     var body: some View {
@@ -29,7 +32,7 @@ struct FreeApiCellView: View {
             }.padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             HStack {
                 Button {
-                    vm.addToFavorites(freeApi)
+                    rs.addToFavorites(freeApi)
                 } label: {
 //                    ZStack {
 //                        Circle().foregroundColor(.indigo)
