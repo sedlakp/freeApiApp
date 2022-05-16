@@ -26,6 +26,8 @@
 		BBFF6686282E80BA00C68F6A /* FavoriteApisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6685282E80BA00C68F6A /* FavoriteApisView.swift */; };
 		BBFF6688282E80CB00C68F6A /* FavoriteApisVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6687282E80CB00C68F6A /* FavoriteApisVM.swift */; };
 		BBFF668A282FAE5500C68F6A /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6689282FAE5500C68F6A /* RealmService.swift */; };
+		BBFF668C28321A0400C68F6A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF668B28321A0400C68F6A /* OnboardingView.swift */; };
+		BBFF668F28321A9500C68F6A /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF668E28321A9500C68F6A /* OnboardingPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		BBFF6685282E80BA00C68F6A /* FavoriteApisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteApisView.swift; sourceTree = "<group>"; };
 		BBFF6687282E80CB00C68F6A /* FavoriteApisVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteApisVM.swift; sourceTree = "<group>"; };
 		BBFF6689282FAE5500C68F6A /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		BBFF668B28321A0400C68F6A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BBFF668E28321A9500C68F6A /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 				BBFF666F282D146500C68F6A /* FreeApisView */,
 				BBFF667E282D291300C68F6A /* CategoriesView */,
 				BBFF6684282E809200C68F6A /* FavoritesView */,
+				BBFF668D28321A0B00C68F6A /* Onboarding */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -199,6 +204,15 @@
 				BBFF6687282E80CB00C68F6A /* FavoriteApisVM.swift */,
 			);
 			path = FavoritesView;
+			sourceTree = "<group>";
+		};
+		BBFF668D28321A0B00C68F6A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BBFF668B28321A0400C68F6A /* OnboardingView.swift */,
+				BBFF668E28321A9500C68F6A /* OnboardingPageView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +360,8 @@
 				BBFF6671282D147A00C68F6A /* FreeApisVM.swift in Sources */,
 				BBFF6675282D1A6300C68F6A /* FreeApiCellView.swift in Sources */,
 				BBFF668A282FAE5500C68F6A /* RealmService.swift in Sources */,
+				BBFF668F28321A9500C68F6A /* OnboardingPageView.swift in Sources */,
+				BBFF668C28321A0400C68F6A /* OnboardingView.swift in Sources */,
 				BBFF6679282D223700C68F6A /* CategoriesWrapper.swift in Sources */,
 				BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */,
 				BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */,
