@@ -43,6 +43,8 @@ class FreeApiRLM: Object, ObjectKeyIdentifiable, Decodable {
     @Persisted var Cors: String
     @Persisted var Link: String
     @Persisted var Category: String
+    
+    @Persisted var noteText: String = ""
 
     convenience init(API: String, Description: String, Auth: String, HTTPS: Bool, Cors: String, Link: String, Category: String) {
     self.init()

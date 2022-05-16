@@ -17,7 +17,7 @@ struct FavoriteApisView: View {
        NavigationView {
            List {
                ForEach(rs.favoritedAPIs) { api in
-                   FreeApiCellView(freeApi: api.toNonRLM())
+                   FavoriteCellView(rlmAPI: api)
                        .buttonStyle(PlainButtonStyle()) // this makes the cell non selectable, only the buttons are touchable
                }.onDelete(perform: rs.unFavorite)
            }

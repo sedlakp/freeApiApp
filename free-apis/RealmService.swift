@@ -18,11 +18,14 @@ struct RealmService: DynamicProperty {
     }
     
     
-    func addToFavorites(_ api: FreeApi) {
+    func addToFavorites(_ api: FreeApi, _ noteText: String) {
         // check if the thing is already in favorites
         
         if favoritedAPIs.filter({$0.API == api.API}).isEmpty {
-            $favoritedAPIs.append(api.toRLM())
+            
+            let rlmApi = api.toRLM()
+            rlmApi.noteText = noteText
+            $favoritedAPIs.append(rlmApi)
         }
         
     }

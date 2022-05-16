@@ -10,6 +10,9 @@ import SwiftUI
 struct FreeApiCellView: View {
     @EnvironmentObject var vm: FreeApisVM
     
+    @Binding var selectedAPI: FreeApi?
+    @Binding var showPopup: Bool
+    
     var rs = RealmService()
     
     let freeApi: FreeApi
@@ -32,7 +35,9 @@ struct FreeApiCellView: View {
             }.padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             HStack {
                 Button {
-                    rs.addToFavorites(freeApi)
+                    //rs.addToFavorites(freeApi)
+                    selectedAPI = freeApi
+                    showPopup = true
                 } label: {
 //                    ZStack {
 //                        Circle().foregroundColor(.indigo)
@@ -61,7 +66,7 @@ struct FreeApiCellView: View {
 
 struct FreeApiCellView_Previews: PreviewProvider {
     static var previews: some View {
-        FreeApiCellView(freeApi: FreeApi.ExampleApi)
+        FreeApiCellView(selectedAPI: .constant(nil), showPopup: .constant(false), freeApi: FreeApi.ExampleApi)
             .environmentObject(FreeApisVM())
     }
 }
