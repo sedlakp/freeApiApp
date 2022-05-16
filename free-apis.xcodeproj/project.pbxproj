@@ -28,6 +28,7 @@
 		BBFF668A282FAE5500C68F6A /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6689282FAE5500C68F6A /* RealmService.swift */; };
 		BBFF668C28321A0400C68F6A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF668B28321A0400C68F6A /* OnboardingView.swift */; };
 		BBFF668F28321A9500C68F6A /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF668E28321A9500C68F6A /* OnboardingPageView.swift */; };
+		BBFF66972832438200C68F6A /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF66962832438200C68F6A /* PopupView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFF66972832438200C68F6A /* PopupView in Frameworks */,
 				BBFF6683282E7EC300C68F6A /* RealmSwift in Frameworks */,
 				BBFF6681282E7EC300C68F6A /* Realm in Frameworks */,
 			);
@@ -236,6 +238,7 @@
 			packageProductDependencies = (
 				BBFF6680282E7EC300C68F6A /* Realm */,
 				BBFF6682282E7EC300C68F6A /* RealmSwift */,
+				BBFF66962832438200C68F6A /* PopupView */,
 			);
 			productName = "free-apis";
 			productReference = BBFF663E282D12E100C68F6A /* free-apis.app */;
@@ -311,6 +314,7 @@
 			mainGroup = BBFF6635282D12E100C68F6A;
 			packageReferences = (
 				BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */,
+				BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = BBFF663F282D12E100C68F6A /* Products */;
 			projectDirPath = "";
@@ -702,6 +706,14 @@
 				kind = branch;
 			};
 		};
+		BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -714,6 +726,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		BBFF66962832438200C68F6A /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
