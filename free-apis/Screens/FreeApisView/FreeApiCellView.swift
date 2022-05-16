@@ -39,15 +39,15 @@ struct FreeApiCellView: View {
                     selectedAPI = freeApi
                     showPopup = true
                 } label: {
-//                    ZStack {
-//                        Circle().foregroundColor(.indigo)
-//                            .frame(width: 40, height: 40)
-//                        Image(systemName: "heart.fill").foregroundColor(.white)
-//                    }
-                    Image(systemName: "heart.circle.fill")
-                        .resizable()
-                        .foregroundColor(.indigo)
-                        .frame(width: 40, height: 40)
+                    ZStack {
+                        Capsule().foregroundColor(.indigo)
+                            .frame(height: 40)
+                        Image(systemName: "heart.fill").foregroundColor(.white)
+                    }
+//                    Image(systemName: "heart.circle.fill")
+//                        .resizable()
+//                        .foregroundColor(.indigo)
+//                        .frame(width: 40, height: 40)
                 }.buttonStyle(PlainButtonStyle())
                 
                 Spacer()
