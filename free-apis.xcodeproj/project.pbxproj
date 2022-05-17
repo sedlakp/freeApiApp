@@ -30,6 +30,7 @@
 		BBFF668F28321A9500C68F6A /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF668E28321A9500C68F6A /* OnboardingPageView.swift */; };
 		BBFF66972832438200C68F6A /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF66962832438200C68F6A /* PopupView */; };
 		BBFF66992832562700C68F6A /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66982832562700C68F6A /* FavoriteCellView.swift */; };
+		BBFF669B28338F6800C68F6A /* PopupAddToFavsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF669A28338F6800C68F6A /* PopupAddToFavsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BBFF668E28321A9500C68F6A /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		BBFF669428323D8900C68F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BBFF66982832562700C68F6A /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
+		BBFF669A28338F6800C68F6A /* PopupAddToFavsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupAddToFavsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				BBFF6643282D12E100C68F6A /* FreeApisView.swift */,
 				BBFF6670282D147A00C68F6A /* FreeApisVM.swift */,
 				BBFF6674282D1A6300C68F6A /* FreeApiCellView.swift */,
+				BBFF669A28338F6800C68F6A /* PopupAddToFavsView.swift */,
 			);
 			path = FreeApisView;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				BBFF6679282D223700C68F6A /* CategoriesWrapper.swift in Sources */,
 				BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */,
 				BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */,
+				BBFF669B28338F6800C68F6A /* PopupAddToFavsView.swift in Sources */,
 				BBFF667D282D290700C68F6A /* CategoriesVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

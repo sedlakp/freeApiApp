@@ -32,36 +32,7 @@ struct FreeApisView: View {
             }.navigationTitle(category ?? "Free APIs")
                 .environmentObject(vm)
                 .popup(isPresented: $showAddToFavPopup, closeOnTap: false, closeOnTapOutside: true) {
-                    VStack {
-                        Text("You can add a note to \(selectedAPI?.API ?? "API")").multilineTextAlignment(.center)
-                        TextEditor(text: $noteText)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .stroke(.black, lineWidth: 1)
-                                )
-                            .cornerRadius(16)
-                        Button {
-                            rs.addToFavorites(selectedAPI!, noteText)
-                            showAddToFavPopup = false
-                            noteText = ""
-                            selectedAPI = nil
-                        } label: {
-                            Text("Add to favorites")
-                                .padding()
-                                .foregroundColor(.white)
-                                .background(.teal)
-                                .cornerRadius(9)
-                        }
-
-                    }.padding()
-                        .frame(width: 300, height: 350)
-                        .background(.white)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 30)
-                                .stroke(.black, lineWidth: 4)
-                            )
-                        .cornerRadius(30.0)
-                        .shadow(radius: 4)
+                    PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)
                 }
         }
 
