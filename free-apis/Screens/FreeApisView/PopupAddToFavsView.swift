@@ -23,7 +23,7 @@ struct PopupAddToFavsView: View {
             TextEditor(text: $noteText)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
-                        .stroke(.black, lineWidth: 1)
+                        .stroke(Color(uiColor: .label), lineWidth: 1)
                     )
                 .cornerRadius(16)
             Button {
@@ -41,7 +41,7 @@ struct PopupAddToFavsView: View {
 
         }.padding()
             .frame(width: 300, height: 350)
-            .background(.white)
+            .background(Color(UIColor.systemBackground))
 //                        .overlay(
 //                            RoundedRectangle(cornerRadius: 30)
 //                                .stroke(.black, lineWidth: 4)

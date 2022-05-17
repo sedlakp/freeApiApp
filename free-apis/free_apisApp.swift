@@ -15,7 +15,7 @@ struct free_apisApp: App {
     @AppStorage("completedOnboarding") private var completedOnboarding = false
     
     init() {
-        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().tintColor = .label
         
     }
     

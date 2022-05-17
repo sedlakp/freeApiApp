@@ -32,7 +32,7 @@ struct SafariView: UIViewControllerRepresentable {
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
         let sc = SFSafariViewController(url: url)
-        sc.preferredControlTintColor = .black
+        sc.preferredControlTintColor = .label
         return sc
     }
 

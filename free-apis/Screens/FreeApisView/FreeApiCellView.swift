@@ -77,7 +77,7 @@ struct FreeApiCellView: View {
                         ZStack {
                             Capsule().foregroundColor(.indigo)
                                 .frame(height: 40)
-                            Image(systemName: "heart.fill").foregroundColor(.white)
+                            Image(systemName: "heart.fill").foregroundColor(Color(uiColor:.systemGray5))
                         }
     //                    Image(systemName: "heart.circle.fill")
     //                        .resizable()
