@@ -31,6 +31,7 @@
 		BBFF66972832438200C68F6A /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF66962832438200C68F6A /* PopupView */; };
 		BBFF66992832562700C68F6A /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66982832562700C68F6A /* FavoriteCellView.swift */; };
 		BBFF669B28338F6800C68F6A /* PopupAddToFavsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF669A28338F6800C68F6A /* PopupAddToFavsView.swift */; };
+		BBFF669D2833921F00C68F6A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF669C2833921F00C68F6A /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		BBFF669428323D8900C68F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BBFF66982832562700C68F6A /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
 		BBFF669A28338F6800C68F6A /* PopupAddToFavsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupAddToFavsView.swift; sourceTree = "<group>"; };
+		BBFF669C2833921F00C68F6A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				BBFF666C282D135500C68F6A /* FreeApi.swift */,
 				BBFF6678282D223700C68F6A /* CategoriesWrapper.swift */,
+				BBFF669C2833921F00C68F6A /* WebView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				BBFF668A282FAE5500C68F6A /* RealmService.swift in Sources */,
 				BBFF668F28321A9500C68F6A /* OnboardingPageView.swift in Sources */,
 				BBFF668C28321A0400C68F6A /* OnboardingView.swift in Sources */,
+				BBFF669D2833921F00C68F6A /* WebView.swift in Sources */,
 				BBFF6679282D223700C68F6A /* CategoriesWrapper.swift in Sources */,
 				BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */,
 				BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */,

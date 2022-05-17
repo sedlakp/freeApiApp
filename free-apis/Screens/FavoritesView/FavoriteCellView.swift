@@ -10,7 +10,7 @@ import SwiftUI
 struct FavoriteCellView: View {
     
     let rlmAPI: FreeApiRLM
-    
+    @State var showWebView: Bool = false
     
     var body: some View {
         
@@ -36,11 +36,17 @@ struct FavoriteCellView: View {
                 
                 Spacer()
                 
-                Link(destination: URL(string: rlmAPI.Link)!) {
+                Button {
+                    showWebView.toggle()
+                } label: {
                     Image(systemName: "link.circle.fill")
                         .resizable()
                         .foregroundColor(.orange)
                         .frame(width: 40, height: 40)
+                }
+                .sheet(isPresented: $showWebView) {
+                    SafariView(url: URL(string: rlmAPI.Link)!)
+                        .edgesIgnoringSafeArea([.bottom])
                 }
             }
 

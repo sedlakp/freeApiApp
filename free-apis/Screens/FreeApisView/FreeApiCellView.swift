@@ -12,6 +12,7 @@ struct FreeApiCellView: View {
     
     @Binding var selectedAPI: FreeApi?
     @Binding var showPopup: Bool
+    @State var showWebView: Bool = false
     
     var rs = RealmService()
     
@@ -52,12 +53,20 @@ struct FreeApiCellView: View {
                 
                 Spacer()
                 
-                Link(destination: URL(string: freeApi.Link)!) {
+                Button {
+                    showWebView.toggle()
+                } label: {
                     Image(systemName: "link.circle.fill")
                         .resizable()
                         .foregroundColor(.orange)
                         .frame(width: 40, height: 40)
+
                 }
+                .sheet(isPresented: $showWebView) {
+                    SafariView(url: URL(string: freeApi.Link)!)
+                        .edgesIgnoringSafeArea([.bottom])
+                }
+                
             }
 
         }.padding()
