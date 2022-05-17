@@ -22,12 +22,31 @@ struct FreeApiCellView: View {
         VStack(alignment: .leading) {
             HStack{
                 Text(freeApi.API).font(Font.system(size: 14))
+                    .fixedSize(horizontal: false, vertical: true)
                 Spacer()
-                ZStack {
-                    Capsule(style: .circular).foregroundColor(.teal)
-                    Text(freeApi.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.system(size: 12)).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
+                if freeApi.HTTPS {
+                    Text("HTTPS")
+                        .font(.system(size: 7, weight: .semibold))
+                        .foregroundColor(.white)
+                        .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+                        .background(.green)
+                        .cornerRadius(3)
+                }
+                
+                if !freeApi.Auth.isEmpty {
+                    Text(freeApi.Auth)
+                        .font(.system(size: 7, weight: .semibold))
+                        .foregroundColor(.black)
+                        .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+                        .background(.yellow)
+                        .cornerRadius(3)
+                }
+                
             }
+            ZStack {
+                Capsule(style: .circular).foregroundColor(.teal)
+                Text(freeApi.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.system(size: 12)).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+            }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
             HStack {
                 Text(freeApi.Description).font(Font.system(size: 11))
                     .foregroundColor(.gray)
