@@ -19,6 +19,8 @@ struct FavoriteApisView: View {
                ForEach(rs.favoritedAPIs) { api in
                    FavoriteCellView(rlmAPI: api)
                        .buttonStyle(PlainButtonStyle()) // this makes the cell non selectable, only the buttons are touchable
+                       .listRowSeparator(.hidden)
+                       .listRowInsets(EdgeInsets())
                }.onDelete(perform: rs.unFavorite)
            }
            .navigationTitle("Favorites")

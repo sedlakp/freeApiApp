@@ -17,6 +17,9 @@ struct FreeApi: Hashable, Decodable {
     let Link: String
     let Category: String
     
+    var isCors: Bool {
+        return self.Cors == "yes"
+    }
     
     static let ExampleApi = FreeApi(API: "Test", Description: "Description", Auth: "what", HTTPS: true, Cors: "idk what this is", Link: "somelink.com", Category: "Dogs")
     
@@ -45,6 +48,10 @@ class FreeApiRLM: Object, ObjectKeyIdentifiable, Decodable {
     @Persisted var Category: String
     
     @Persisted var noteText: String = ""
+    
+    var isCors: Bool {
+        return self.Cors == "yes"
+    }
 
     convenience init(API: String, Description: String, Auth: String, HTTPS: Bool, Cors: String, Link: String, Category: String) {
     self.init()

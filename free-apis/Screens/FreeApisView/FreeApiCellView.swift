@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// I could also use a protocol for FreeApi and FreeApiRLM objects and use just this View to show cells
 struct FreeApiCellView: View {
     @EnvironmentObject var vm: FreeApisVM
     
@@ -20,75 +21,90 @@ struct FreeApiCellView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack{
-                Text(freeApi.API).font(Font.system(size: 14))
-                    .fixedSize(horizontal: false, vertical: true)
-                Spacer()
-                if freeApi.HTTPS {
-                    Text("HTTPS")
-                        .font(.system(size: 7, weight: .semibold))
-                        .foregroundColor(.white)
+            VStack(alignment: .leading) {
+                HStack{
+                    Text(freeApi.API).font(Font.system(size: 14))
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer()
+                    ZStack {
+                        Capsule(style: .circular).foregroundColor(.teal)
+                        Text(freeApi.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.system(size: 12)).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                    }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
+                }
+                Divider()
+                HStack {
+                    if freeApi.HTTPS {
+                        Text("HTTPS")
+                            .font(.system(size: 7, weight: .semibold))
+                            .foregroundColor(.white)
                         .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                         .background(.green)
                         .cornerRadius(3)
-                }
-                
-                if !freeApi.Auth.isEmpty {
-                    Text(freeApi.Auth)
-                        .font(.system(size: 7, weight: .semibold))
-                        .foregroundColor(.black)
-                        .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                        .background(.yellow)
-                        .cornerRadius(3)
-                }
-                
-            }
-            ZStack {
-                Capsule(style: .circular).foregroundColor(.teal)
-                Text(freeApi.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.system(size: 12)).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-            }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
-            HStack {
-                Text(freeApi.Description).font(Font.system(size: 11))
-                    .foregroundColor(.gray)
-                //.lineLimit(nil)
-                    .fixedSize(horizontal: false, vertical: true)
-            }.padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-            HStack {
-                Button {
-                    //rs.addToFavorites(freeApi)
-                    selectedAPI = freeApi
-                    showPopup = true
-                } label: {
-                    ZStack {
-                        Capsule().foregroundColor(.indigo)
-                            .frame(height: 40)
-                        Image(systemName: "heart.fill").foregroundColor(.white)
                     }
-//                    Image(systemName: "heart.circle.fill")
-//                        .resizable()
-//                        .foregroundColor(.indigo)
-//                        .frame(width: 40, height: 40)
-                }.buttonStyle(PlainButtonStyle())
                 
-                Spacer()
-                
-                Button {
-                    showWebView.toggle()
-                } label: {
-                    Image(systemName: "link.circle.fill")
-                        .resizable()
-                        .foregroundColor(.orange)
-                        .frame(width: 40, height: 40)
-
+                    if !freeApi.Auth.isEmpty {
+                        Text(freeApi.Auth)
+                            .font(.system(size: 7, weight: .semibold))
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+                            .background(.yellow)
+                            .cornerRadius(3)
+                    }
+                    
+                    if freeApi.isCors {
+                        Text("CORS")
+                            .font(.system(size: 7, weight: .semibold))
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+                            .background(.brown)
+                            .cornerRadius(3)
+                    }
                 }
-                .sheet(isPresented: $showWebView) {
-                    SafariView(url: URL(string: freeApi.Link)!)
-                        .edgesIgnoringSafeArea([.bottom])
-                }
-                
-            }
 
-        }.padding()
+                HStack {
+                    Text(freeApi.Description).font(Font.system(size: 11))
+                        .foregroundColor(.gray)
+                    //.lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+            
+                HStack {
+                    Button {
+                        //rs.addToFavorites(freeApi)
+                        selectedAPI = freeApi
+                        showPopup = true
+                    } label: {
+                        ZStack {
+                            Capsule().foregroundColor(.indigo)
+                                .frame(height: 40)
+                            Image(systemName: "heart.fill").foregroundColor(.white)
+                        }
+    //                    Image(systemName: "heart.circle.fill")
+    //                        .resizable()
+    //                        .foregroundColor(.indigo)
+    //                        .frame(width: 40, height: 40)
+                    }.buttonStyle(PlainButtonStyle())
+                    
+                    Spacer()
+                    
+                    Button {
+                        showWebView.toggle()
+                    } label: {
+                        Image(systemName: "link.circle.fill")
+                            .resizable()
+                            .foregroundColor(.orange)
+                            .frame(width: 40, height: 40)
+
+                    }
+                    .sheet(isPresented: $showWebView) {
+                        SafariView(url: URL(string: freeApi.Link)!)
+                            .edgesIgnoringSafeArea([.bottom])
+                    }
+                    
+                }
+            }.padding()
+            Divider() // replaces the default list cell separator
+        }
     }
 }
 

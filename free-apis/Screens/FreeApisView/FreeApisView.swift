@@ -29,7 +29,10 @@ struct FreeApisView: View {
             List(vm.freeApis, id: \.self) { api in
                 FreeApiCellView(selectedAPI: $selectedAPI, showPopup: $showAddToFavPopup, freeApi: api)
                     .buttonStyle(PlainButtonStyle())
-            }.navigationTitle(category ?? "Free APIs")
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets()) // remove default padding, set padding inside the cell instead
+            }
+            .navigationTitle(category ?? "Free APIs")
                 .environmentObject(vm)
                 .popup(isPresented: $showAddToFavPopup, closeOnTap: false, closeOnTapOutside: true) {
                     PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)
