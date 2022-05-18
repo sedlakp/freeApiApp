@@ -16,6 +16,8 @@ struct free_apisApp: App {
     @AppStorage("completedOnboarding") private var completedOnboarding = false
     
     init() {
+        UIScrollView.appearance().keyboardDismissMode = .onDrag
+        
         UINavigationBar.appearance().tintColor = .label
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont.rubik.bold]
         
@@ -23,6 +25,7 @@ struct free_apisApp: App {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.rubik.regular], for: .highlighted)
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.rubik.regular], for: .focused)
         
+        IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true

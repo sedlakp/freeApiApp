@@ -65,19 +65,13 @@ struct FavoriteCellView: View {
             
                 HStack(alignment: .top) {
                     
-                    // zstack to make the texteditor dynamic height based on the content
-                    ZStack {
                         TextEditor(text: $rlmAPI.noteText)
                             .accentColor(Color(uiColor: .label))
+                            .frame(height: 200)
                             .font(Font.rubik.regular)
                             .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                             .background(.gray.opacity(0.1))
                             .cornerRadius(12)
-                        Text(rlmAPI.noteText).opacity(0)
-                            .font(Font.rubik.regular)
-                            .padding(EdgeInsets(top: 13, leading: 13, bottom: 13, trailing: 13))
-                            .cornerRadius(12)
-                    }
                     
                     Spacer()
                     Button {

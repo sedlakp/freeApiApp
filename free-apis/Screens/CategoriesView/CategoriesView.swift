@@ -49,9 +49,12 @@ struct CategoriesView: View {
                     .navigationBarTitleDisplayMode(.inline)
             }
         }.environmentObject(vm)
-            .popup(isPresented: $showAddToFavPopup, closeOnTap: false, closeOnTapOutside: true) {
+            .sheet(isPresented: $showAddToFavPopup, content: {
                 PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)
-            }
+            })
+//            .popup(isPresented: $showAddToFavPopup, closeOnTap: false, closeOnTapOutside: true) {
+//                PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)
+//            }
     }
 }
 

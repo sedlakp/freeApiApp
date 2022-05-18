@@ -21,6 +21,8 @@ struct PopupAddToFavsView: View {
                 .font(Font.rubik.bold)
                 .multilineTextAlignment(.center)
             TextEditor(text: $noteText)
+                .frame(height: 300) // maybe make dynamic?
+                .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                 .accentColor(Color(uiColor: .label))
                 .font(Font.rubik.regular)
                 .overlay(
@@ -41,9 +43,9 @@ struct PopupAddToFavsView: View {
                     .background(.teal)
                     .cornerRadius(16)
             }//.frame(height: 20, alignment: .center)
-
+            Spacer()
         }.padding()
-            .frame(width: 300, height: 350)
+            //.frame(width: 300, height: 350)
             .background(Color(UIColor.systemBackground))
 //                        .overlay(
 //                            RoundedRectangle(cornerRadius: 30)

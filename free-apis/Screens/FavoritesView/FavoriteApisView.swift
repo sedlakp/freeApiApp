@@ -25,7 +25,6 @@ struct FavoriteApisView: View {
            }
            .navigationTitle(Text("Favorites"))
            .navigationBarTitleDisplayMode(.inline)
-           
        }
     }
 }
