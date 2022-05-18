@@ -45,7 +45,7 @@ struct OnboardingPageView: View {
                                 .font(Font.rubik.regular)
                                 .frame(alignment: .leading)
                         }
-                    }
+                    }.padding(.vertical, 3)
                 }.padding()
             }
             

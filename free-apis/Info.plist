@@ -11,7 +11,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>
-		<string>api</string>
+		<string>apis</string>
 		<key>UILaunchScreen</key>
 		<dict/>
 	</dict>

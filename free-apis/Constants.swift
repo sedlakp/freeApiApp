@@ -56,8 +56,9 @@ enum OnboardingPageContent: CaseIterable {
         case .Features:
             return [
                 "Look up APIs based on category",
-                "Favorite APIs",
+                "Mark your favorite APIs",
                 "Add a comment to favorited API",
+                "Random API everytime you open the app, so exciting!",
             ]
         }
     }
