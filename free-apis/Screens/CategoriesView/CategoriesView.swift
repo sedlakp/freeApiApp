@@ -6,29 +6,52 @@
 //
 
 import SwiftUI
+import PopupView
 
 struct CategoriesView: View {
     
     @ObservedObject var vm = CategoriesVM()
     
+    @State private var selectedAPI: FreeApi?
+    @State private var showAddToFavPopup: Bool = false
+    @State private var noteText: String = ""
+    
     var body: some View {
-        NavigationView{
+        NavigationView {
             
-            if vm.categories.isEmpty {
-                ProgressView().onAppear {
-                    vm.getCategories()
-                }.navigationTitle(Text("Categories"))
-                    .navigationBarTitleDisplayMode(.inline)
+            if !vm.categories.isEmpty && vm.randomApi != nil {
+                
+                List {
+                    Section(content: {
+                        FreeApiCellView(selectedAPI: $selectedAPI, showPopup: $showAddToFavPopup, isDividerShown: false, freeApi: vm.randomApi!)
+                            .buttonStyle(PlainButtonStyle())
+                    }, header: {
+                        Text("Random API").font(Font.rubik.semiBold)
+                    })
+                    Section(content: {
+                        ForEach(vm.categories, id: \.self) { category in
+                            NavigationLink(destination: FreeApisView(category: category)) {
+                                Text(category).font(Font.rubik.bold)
+                            }
+                            
+                        }.navigationTitle(Text("FREE APIs"))
+                            .navigationBarTitleDisplayMode(.inline)
+                    }, header: {
+                        Text("Categories").font(Font.rubik.semiBold)
+                    } )
+                }
+                
             } else {
-                List(vm.categories, id: \.self) { category in
-                    NavigationLink(destination: FreeApisView(category: category)) {
-                        Text(category).font(Font.rubik.bold)
-                    }
-                    
-                }.navigationTitle(Text("Categories"))
+                ProgressView().onAppear {
+                    vm.getRandom()
+                    vm.getCategories()
+                }.navigationTitle(Text("FREE APIs"))
                     .navigationBarTitleDisplayMode(.inline)
             }
-        }
+        }.environmentObject(vm)
+            .popup(isPresented: $showAddToFavPopup, closeOnTap: false, closeOnTapOutside: true) {
+                PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)
+            }
     }
 }
 

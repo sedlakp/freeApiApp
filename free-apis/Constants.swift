@@ -14,11 +14,13 @@ enum ApiPaths: CustomStringConvertible {
     
     case entries
     case cateogires
+    case randomApi
     
     var description: String {
         switch self {
         case .entries:              return "/entries"
         case .cateogires:           return "/categories"
+        case .randomApi:            return "/random"
         }
     }
 }

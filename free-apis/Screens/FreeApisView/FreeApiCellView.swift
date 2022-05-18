@@ -15,6 +15,8 @@ struct FreeApiCellView: View {
     @Binding var showPopup: Bool
     @State var showWebView: Bool = false
     
+    var isDividerShown: Bool = true
+    
     var rs = RealmService()
     
     let freeApi: FreeApi
@@ -103,7 +105,9 @@ struct FreeApiCellView: View {
                     
                 }
             }.padding()
-            Divider() // replaces the default list cell separator
+            if isDividerShown {
+                Divider() // replaces the default list cell separator
+            }
         }
     }
 }

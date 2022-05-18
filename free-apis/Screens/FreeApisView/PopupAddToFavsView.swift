@@ -21,7 +21,7 @@ struct PopupAddToFavsView: View {
                 .font(Font.rubik.bold)
                 .multilineTextAlignment(.center)
             TextEditor(text: $noteText)
-                .accentColor(Color(uiColor: .label))
+                //.accentColor(Color(uiColor: .label))
                 .font(Font.rubik.regular)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
