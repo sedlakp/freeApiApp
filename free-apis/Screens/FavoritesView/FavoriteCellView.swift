@@ -68,7 +68,7 @@ struct FavoriteCellView: View {
                     // zstack to make the texteditor dynamic height based on the content
                     ZStack {
                         TextEditor(text: $rlmAPI.noteText)
-                            //.accentColor(Color(uiColor: .label))
+                            .accentColor(Color(uiColor: .label))
                             .font(Font.rubik.regular)
                             .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                             .background(.gray.opacity(0.1))

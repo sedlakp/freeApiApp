@@ -18,6 +18,7 @@ struct free_apisApp: App {
     init() {
         UINavigationBar.appearance().tintColor = .label
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont.rubik.bold]
+        
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.rubik.regular], for: .normal)
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.rubik.regular], for: .highlighted)
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.rubik.regular], for: .focused)
@@ -42,7 +43,7 @@ struct free_apisApp: App {
                     FavoriteApisView().tabItem {
                         Label("Favorited", systemImage: "star").font(Font.rubik.semiBoldMini)
                             }.tag(2)
-                }
+                }.accentColor(Color(uiColor: .label))
             }
         }
     }

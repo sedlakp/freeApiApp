@@ -35,7 +35,6 @@ class FreeApisVM: ObservableObject, DynamicProperty {
             .decode(type: FreeApisWrap.self, decoder: JSONDecoder())
             .map{ $0.entries }
             .replaceError(with: [])
-            .print("1>")
             .eraseToAnyPublisher()
             .receive(on: RunLoop.main)
             .assign(to: \Self.freeApis, on: self)
