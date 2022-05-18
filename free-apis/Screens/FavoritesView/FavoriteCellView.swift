@@ -17,19 +17,19 @@ struct FavoriteCellView: View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
                 HStack{
-                    Text(rlmAPI.API).font(Font.system(size: 14))
+                    Text(rlmAPI.API).font(Font.rubik.bold)
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                     ZStack {
                         Capsule(style: .circular).foregroundColor(.teal)
-                        Text(rlmAPI.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.system(size: 12)).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                        Text(rlmAPI.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.rubik.semiBoldSmall).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                     }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
                 }
                 Divider()
                 HStack {
                     if rlmAPI.HTTPS {
                         Text("HTTPS")
-                            .font(.system(size: 7, weight: .semibold))
+                            .font(Font.rubik.semiBoldMini)
                             .foregroundColor(.white)
                         .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                         .background(.green)
@@ -38,7 +38,7 @@ struct FavoriteCellView: View {
                 
                     if !rlmAPI.Auth.isEmpty {
                         Text(rlmAPI.Auth)
-                            .font(.system(size: 7, weight: .semibold))
+                            .font(Font.rubik.semiBoldMini)
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                             .background(.yellow)
@@ -47,7 +47,7 @@ struct FavoriteCellView: View {
                     
                     if rlmAPI.isCors {
                         Text("CORS")
-                            .font(.system(size: 7, weight: .semibold))
+                            .font(Font.rubik.semiBoldMini)
                             .foregroundColor(.white)
                             .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                             .background(.brown)
@@ -56,7 +56,7 @@ struct FavoriteCellView: View {
                 }
 
                 HStack {
-                    Text(rlmAPI.Description).font(Font.system(size: 11))
+                    Text(rlmAPI.Description).font(Font.rubik.regular)
                         .foregroundColor(.gray)
                     //.lineLimit(nil)
                         .fixedSize(horizontal: false, vertical: true)
@@ -64,7 +64,7 @@ struct FavoriteCellView: View {
             
                 HStack {
                     Text(rlmAPI.noteText)
-                        .font(Font.system(size: 11))
+                        .font(Font.rubik.regular)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                         .background(.gray.opacity(0.1))

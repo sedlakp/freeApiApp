@@ -23,7 +23,7 @@ struct FavoriteApisView: View {
                        .listRowInsets(EdgeInsets())
                }.onDelete(perform: rs.unFavorite)
            }
-           .navigationTitle("Favorites")
+           .navigationTitle(Text("Favorites"))
            .navigationBarTitleDisplayMode(.inline)
            
        }

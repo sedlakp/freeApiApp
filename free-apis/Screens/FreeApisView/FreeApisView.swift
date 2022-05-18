@@ -24,7 +24,7 @@ struct FreeApisView: View {
         if vm.freeApis.isEmpty {
             ProgressView().onAppear {
                 vm.getEntries(for: category)
-            }.navigationTitle(category ?? "Free APIs")
+            }.navigationTitle(Text(category ?? "Free APIs"))
         } else {
             List(vm.freeApis, id: \.self) { api in
                 FreeApiCellView(selectedAPI: $selectedAPI, showPopup: $showAddToFavPopup, freeApi: api)
@@ -32,7 +32,7 @@ struct FreeApisView: View {
                     .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets()) // remove default padding, set padding inside the cell instead
             }
-            .navigationTitle(category ?? "Free APIs")
+            .navigationTitle(Text(category ?? "Free APIs"))
                 .environmentObject(vm)
                 .popup(isPresented: $showAddToFavPopup, closeOnTap: false, closeOnTapOutside: true) {
                     PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)

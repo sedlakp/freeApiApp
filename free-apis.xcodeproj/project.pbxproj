@@ -32,6 +32,10 @@
 		BBFF66992832562700C68F6A /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66982832562700C68F6A /* FavoriteCellView.swift */; };
 		BBFF669B28338F6800C68F6A /* PopupAddToFavsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF669A28338F6800C68F6A /* PopupAddToFavsView.swift */; };
 		BBFF669D2833921F00C68F6A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF669C2833921F00C68F6A /* WebView.swift */; };
+		BBFF66A12834CA7100C68F6A /* FontEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66A02834CA7100C68F6A /* FontEx.swift */; };
+		BBFF66A62834CE5600C68F6A /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A32834CE5600C68F6A /* Rubik-Bold.ttf */; };
+		BBFF66A72834CE5600C68F6A /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A42834CE5600C68F6A /* Rubik-SemiBold.ttf */; };
+		BBFF66A82834CE5600C68F6A /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		BBFF66982832562700C68F6A /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
 		BBFF669A28338F6800C68F6A /* PopupAddToFavsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupAddToFavsView.swift; sourceTree = "<group>"; };
 		BBFF669C2833921F00C68F6A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		BBFF66A02834CA7100C68F6A /* FontEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontEx.swift; sourceTree = "<group>"; };
+		BBFF66A32834CE5600C68F6A /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		BBFF66A42834CE5600C68F6A /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +143,11 @@
 				BBFF6641282D12E100C68F6A /* free_apisApp.swift */,
 				BBFF6672282D153A00C68F6A /* Constants.swift */,
 				BBFF6689282FAE5500C68F6A /* RealmService.swift */,
+				BBFF66A02834CA7100C68F6A /* FontEx.swift */,
 				BBFF666E282D145900C68F6A /* Screens */,
 				BBFF666B282D133E00C68F6A /* Models */,
 				BBFF6645282D12E400C68F6A /* Assets.xcassets */,
+				BBFF66A22834CE5600C68F6A /* Rubik */,
 				BBFF6647282D12E400C68F6A /* Preview Content */,
 			);
 			path = "free-apis";
@@ -226,6 +236,16 @@
 				BBFF668E28321A9500C68F6A /* OnboardingPageView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BBFF66A22834CE5600C68F6A /* Rubik */ = {
+			isa = PBXGroup;
+			children = (
+				BBFF66A32834CE5600C68F6A /* Rubik-Bold.ttf */,
+				BBFF66A42834CE5600C68F6A /* Rubik-SemiBold.ttf */,
+				BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */,
+			);
+			path = Rubik;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +361,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFF66A82834CE5600C68F6A /* Rubik-Regular.ttf in Resources */,
+				BBFF66A62834CE5600C68F6A /* Rubik-Bold.ttf in Resources */,
+				BBFF66A72834CE5600C68F6A /* Rubik-SemiBold.ttf in Resources */,
 				BBFF6649282D12E400C68F6A /* Preview Assets.xcassets in Resources */,
 				BBFF6646282D12E400C68F6A /* Assets.xcassets in Resources */,
 			);
@@ -378,6 +401,7 @@
 				BBFF668A282FAE5500C68F6A /* RealmService.swift in Sources */,
 				BBFF668F28321A9500C68F6A /* OnboardingPageView.swift in Sources */,
 				BBFF668C28321A0400C68F6A /* OnboardingView.swift in Sources */,
+				BBFF66A12834CA7100C68F6A /* FontEx.swift in Sources */,
 				BBFF669D2833921F00C68F6A /* WebView.swift in Sources */,
 				BBFF6679282D223700C68F6A /* CategoriesWrapper.swift in Sources */,
 				BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */,

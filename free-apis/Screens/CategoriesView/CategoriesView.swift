@@ -17,14 +17,16 @@ struct CategoriesView: View {
             if vm.categories.isEmpty {
                 ProgressView().onAppear {
                     vm.getCategories()
-                }.navigationTitle("Categories")
+                }.navigationTitle(Text("Categories"))
+                    .navigationBarTitleDisplayMode(.inline)
             } else {
                 List(vm.categories, id: \.self) { category in
                     NavigationLink(destination: FreeApisView(category: category)) {
-                        Text(category)
+                        Text(category).font(Font.rubik.bold)
                     }
                     
-                }.navigationTitle("Categories")//.navigationBarTitleDisplayMode(.inline)
+                }.navigationTitle(Text("Categories"))
+                    .navigationBarTitleDisplayMode(.inline)
             }
         }
     }

@@ -21,7 +21,8 @@ struct OnboardingPageView: View {
                 .frame(height: 100, alignment: .center)
                 .shadow(radius: 2)
             Spacer().frame(width: 40, height: 40)
-            Text(page.titleText).font(.largeTitle)
+            Text(page.titleText)
+                .font(Font.rubik.regularTitle)
                 .shadow(radius: 2)
             Spacer().frame(height: 5)
             switch page {
@@ -29,6 +30,7 @@ struct OnboardingPageView: View {
                 Text(page.detailContent.first!)
                     //.fixedSize(horizontal: false, vertical: true)
                     //.lineLimit(nil)
+                    .font(Font.rubik.regular)
                     .multilineTextAlignment(.center)
                     .padding()
             case .Features:
@@ -39,7 +41,9 @@ struct OnboardingPageView: View {
                                 .scaledToFit()
                                 .foregroundColor(.yellow)
                                 .shadow(radius: 0.6)
-                            Text(line).frame(alignment: .leading)
+                            Text(line)
+                                .font(Font.rubik.regular)
+                                .frame(alignment: .leading)
                         }
                     }
                 }.padding()
@@ -51,7 +55,7 @@ struct OnboardingPageView: View {
                     completedOnboarding = true
                 } label: {
                     Text("Finish Onboarding")
-                        .bold()
+                        .font(Font.rubik.regular)
                         .padding()
                         .background(.teal)
                         .foregroundColor(.white)

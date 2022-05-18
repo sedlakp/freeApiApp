@@ -23,19 +23,19 @@ struct FreeApiCellView: View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
                 HStack{
-                    Text(freeApi.API).font(Font.system(size: 14))
+                    Text(freeApi.API).font(Font.rubik.bold)
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                     ZStack {
                         Capsule(style: .circular).foregroundColor(.teal)
-                        Text(freeApi.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.system(size: 12)).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                        Text(freeApi.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.rubik.semiBoldSmall).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                     }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
                 }
                 Divider()
                 HStack {
                     if freeApi.HTTPS {
                         Text("HTTPS")
-                            .font(.system(size: 7, weight: .semibold))
+                            .font(Font.rubik.semiBoldMini)
                             .foregroundColor(.white)
                         .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                         .background(.green)
@@ -44,7 +44,7 @@ struct FreeApiCellView: View {
                 
                     if !freeApi.Auth.isEmpty {
                         Text(freeApi.Auth)
-                            .font(.system(size: 7, weight: .semibold))
+                            .font(Font.rubik.semiBoldMini)
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                             .background(.yellow)
@@ -53,7 +53,7 @@ struct FreeApiCellView: View {
                     
                     if freeApi.isCors {
                         Text("CORS")
-                            .font(.system(size: 7, weight: .semibold))
+                            .font(Font.rubik.semiBoldMini)
                             .foregroundColor(.white)
                             .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                             .background(.brown)
@@ -62,7 +62,7 @@ struct FreeApiCellView: View {
                 }
 
                 HStack {
-                    Text(freeApi.Description).font(Font.system(size: 11))
+                    Text(freeApi.Description).font(Font.rubik.regular)
                         .foregroundColor(.gray)
                     //.lineLimit(nil)
                         .fixedSize(horizontal: false, vertical: true)

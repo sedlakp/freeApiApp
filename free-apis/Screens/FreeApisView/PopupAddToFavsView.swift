@@ -18,7 +18,7 @@ struct PopupAddToFavsView: View {
     var body: some View {
         VStack {
             Text("You can add a note to \(selectedAPI?.API ?? "API")")
-                .bold()
+                .font(Font.rubik.bold)
                 .multilineTextAlignment(.center)
             TextEditor(text: $noteText)
                 .overlay(
@@ -33,6 +33,7 @@ struct PopupAddToFavsView: View {
                 selectedAPI = nil
             } label: {
                 Text("Add to favorites")
+                    .font(Font.rubik.regular)
                     .padding(EdgeInsets(top: 8, leading: 15, bottom: 8, trailing: 15))
                     .foregroundColor(.white)
                     .background(.teal)
