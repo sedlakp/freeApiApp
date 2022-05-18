@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import IQKeyboardManagerSwift
 
 @main
 struct free_apisApp: App {
@@ -21,6 +22,9 @@ struct free_apisApp: App {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.rubik.regular], for: .highlighted)
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.rubik.regular], for: .focused)
         
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
     
     var body: some Scene {

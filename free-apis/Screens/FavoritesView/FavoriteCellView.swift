@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct FavoriteCellView: View {
     
-    let rlmAPI: FreeApiRLM
+    @ObservedRealmObject var rlmAPI: FreeApiRLM
     @State var showWebView: Bool = false
     
     var body: some View {
@@ -62,13 +63,22 @@ struct FavoriteCellView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }.padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             
-                HStack {
-                    Text(rlmAPI.noteText)
-                        .font(Font.rubik.regular)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                        .background(.gray.opacity(0.1))
-                        .cornerRadius(12)
+                HStack(alignment: .top) {
+                    
+                    // zstack to make the texteditor dynamic height based on the content
+                    ZStack {
+                        TextEditor(text: $rlmAPI.noteText)
+                            .accentColor(Color(uiColor: .label))
+                            .font(Font.rubik.regular)
+                            .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
+                            .background(.gray.opacity(0.1))
+                            .cornerRadius(12)
+                        Text(rlmAPI.noteText).opacity(0)
+                            .font(Font.rubik.regular)
+                            .padding(EdgeInsets(top: 13, leading: 13, bottom: 13, trailing: 13))
+                            .cornerRadius(12)
+                    }
+                    
                     Spacer()
                     Button {
                         showWebView.toggle()

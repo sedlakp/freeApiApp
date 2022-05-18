@@ -36,6 +36,7 @@
 		BBFF66A62834CE5600C68F6A /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A32834CE5600C68F6A /* Rubik-Bold.ttf */; };
 		BBFF66A72834CE5600C68F6A /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A42834CE5600C68F6A /* Rubik-SemiBold.ttf */; };
 		BBFF66A82834CE5600C68F6A /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */; };
+		BBFF66AE2834DFD600C68F6A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF66AD2834DFD600C68F6A /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFF66972832438200C68F6A /* PopupView in Frameworks */,
+				BBFF66AE2834DFD600C68F6A /* IQKeyboardManagerSwift in Frameworks */,
 				BBFF6683282E7EC300C68F6A /* RealmSwift in Frameworks */,
 				BBFF6681282E7EC300C68F6A /* Realm in Frameworks */,
 			);
@@ -268,6 +270,7 @@
 				BBFF6680282E7EC300C68F6A /* Realm */,
 				BBFF6682282E7EC300C68F6A /* RealmSwift */,
 				BBFF66962832438200C68F6A /* PopupView */,
+				BBFF66AD2834DFD600C68F6A /* IQKeyboardManagerSwift */,
 			);
 			productName = "free-apis";
 			productReference = BBFF663E282D12E100C68F6A /* free-apis.app */;
@@ -344,6 +347,7 @@
 			packageReferences = (
 				BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */,
 				BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */,
+				BBFF66AC2834DFD600C68F6A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = BBFF663F282D12E100C68F6A /* Products */;
 			projectDirPath = "";
@@ -750,6 +754,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		BBFF66AC2834DFD600C68F6A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -767,6 +779,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */;
 			productName = PopupView;
+		};
+		BBFF66AD2834DFD600C68F6A /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBFF66AC2834DFD600C68F6A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
