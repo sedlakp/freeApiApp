@@ -35,7 +35,7 @@ struct CategoriesView: View {
                                 Text(category).font(Font.rubik.bold)
                             }
                             
-                        }.navigationTitle(Text("FREE APIs"))
+                        }.navigationTitle(Text("Public APIs"))
                             .navigationBarTitleDisplayMode(.inline)
                     }, header: {
                         Text("Categories").font(Font.rubik.semiBold)
@@ -46,7 +46,7 @@ struct CategoriesView: View {
                 ProgressView().onAppear {
                     vm.getRandom()
                     vm.getCategories()
-                }.navigationTitle(Text("FREE APIs"))
+                }.navigationTitle(Text("Public APIs"))
                     .navigationBarTitleDisplayMode(.inline)
             }
         }.environmentObject(vm)

@@ -56,7 +56,7 @@ enum OnboardingPageContent: CaseIterable {
         switch self {
         case .Intro:
             return [
-                "Hello, this app shows a list of free apis to use in your next project."
+                "Hello, this app shows a list of public apis to use in your next project."
             ]
         case .LightDark:
             return [
@@ -64,7 +64,7 @@ enum OnboardingPageContent: CaseIterable {
             ]
         case .Features:
             return [
-                "Look up APIs based on category",
+                "Look up APIs based on category or a keyword",
                 "Mark your favorite APIs",
                 "Add a comment to favorited API",
                 "Random API everytime you open the app, so exciting!",

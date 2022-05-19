@@ -33,7 +33,7 @@ struct FreeApisView: View {
         if vm.freeApis.isEmpty {
             ProgressView().onAppear {
                 vm.getEntries(for: category)
-            }.navigationTitle(Text(category ?? "Free APIs"))
+            }.navigationTitle(Text(category ?? "Public APIs"))
              .navigationBarTitleDisplayMode(.inline)
         } else {
             List(vm.searchMatch, id: \.self) { api in
@@ -43,7 +43,7 @@ struct FreeApisView: View {
                     .listRowInsets(EdgeInsets()) // remove default padding, set padding inside the cell instead
             }
             .searchable(text: $vm.searchText, prompt: "Search by a keyword")
-            .navigationTitle(Text(category ?? "Free APIs"))//not visible if not wrapped inside a navigation view
+            .navigationTitle(Text(category ?? "Public APIs"))//not visible if not wrapped inside a navigation view
             .navigationBarTitleDisplayMode(.inline)
                 .environmentObject(vm)
                 .sheet(isPresented: $showAddToFavPopup, content: {
