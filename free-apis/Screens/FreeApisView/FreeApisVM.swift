@@ -14,6 +14,13 @@ class FreeApisVM: ObservableObject, DynamicProperty {
     
     @Published var freeApis: [FreeApi] = []
     
+    @Published var searchText: String = ""
+    
+    /// Looks for a string in api's name or its description
+    var searchMatch: [FreeApi] {
+        return searchText.isEmpty ? freeApis : freeApis.filter { $0.API.contains(searchText) || $0.Description.contains(searchText) }
+    }
+    
     private var getEntriesTask: AnyCancellable?
     
     /// Func gets all either all api entries available if `category` is nil.

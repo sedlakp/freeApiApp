@@ -40,7 +40,7 @@ struct free_apisApp: App {
                     CategoriesView().tabItem {
                         Label("Categories", systemImage: "list.dash").font(Font.rubik.semiBoldMini)
                             }.tag(0)
-                    FreeApisView().tabItem {
+                    MainFreeApisView().tabItem {
                         Label("All", systemImage: "figure.wave").font(Font.rubik.semiBoldMini)
                             }.tag(1)
                     FavoriteApisView().tabItem {

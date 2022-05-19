@@ -8,6 +8,15 @@
 import SwiftUI
 import PopupView
 
+
+struct MainFreeApisView: View {
+    var body: some View {
+        return NavigationView {
+            FreeApisView()
+        }
+    }
+}
+
 struct FreeApisView: View {
     
     @State private var selectedAPI: FreeApi?
@@ -25,14 +34,17 @@ struct FreeApisView: View {
             ProgressView().onAppear {
                 vm.getEntries(for: category)
             }.navigationTitle(Text(category ?? "Free APIs"))
+             .navigationBarTitleDisplayMode(.inline)
         } else {
-            List(vm.freeApis, id: \.self) { api in
+            List(vm.searchMatch, id: \.self) { api in
                 FreeApiCellView(selectedAPI: $selectedAPI, showPopup: $showAddToFavPopup, freeApi: api)
                     .buttonStyle(PlainButtonStyle())
                     .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets()) // remove default padding, set padding inside the cell instead
             }
-            .navigationTitle(Text(category ?? "Free APIs"))
+            .searchable(text: $vm.searchText, prompt: "Search by a keyword")
+            .navigationTitle(Text(category ?? "Free APIs"))//not visible if not wrapped inside a navigation view
+            .navigationBarTitleDisplayMode(.inline)
                 .environmentObject(vm)
                 .sheet(isPresented: $showAddToFavPopup, content: {
                     PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)

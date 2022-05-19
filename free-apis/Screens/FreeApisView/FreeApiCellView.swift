@@ -52,7 +52,7 @@ struct FreeApiCellView: View {
                     Text(freeApi.Description).font(Font.rubik.regular)
                         .foregroundColor(.gray)
                         .fixedSize(horizontal: false, vertical: true)
-                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                }.padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
             
                 HStack {
                     Button {
