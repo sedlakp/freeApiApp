@@ -15,16 +15,20 @@ struct FavoriteApisView: View {
     
     var body: some View {
        NavigationView {
-           List {
-               ForEach(rs.favoritedAPIs) { api in
-                   FavoriteCellView(rlmAPI: api)
-                       .buttonStyle(PlainButtonStyle()) // this makes the cell non selectable, only the buttons are touchable
-                       .listRowSeparator(.hidden)
-                       .listRowInsets(EdgeInsets())
-               }.onDelete(perform: rs.unFavorite)
+           if rs.favoritedAPIs.isEmpty {
+               EmptyView.noFavorites
+           } else {
+               List {
+                   ForEach(rs.favoritedAPIs) { api in
+                       FavoriteCellView(rlmAPI: api)
+                           .buttonStyle(PlainButtonStyle()) // this makes the cell non selectable, only the buttons are touchable
+                           .listRowSeparator(.hidden)
+                           .listRowInsets(EdgeInsets())
+                   }.onDelete(perform: rs.unFavorite)
+               }
+               .navigationTitle(Text("Favorites"))
+               .navigationBarTitleDisplayMode(.inline)
            }
-           .navigationTitle(Text("Favorites"))
-           .navigationBarTitleDisplayMode(.inline)
        }
     }
 }

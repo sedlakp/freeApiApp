@@ -39,6 +39,7 @@
 		BBFF66AE2834DFD600C68F6A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF66AD2834DFD600C68F6A /* IQKeyboardManagerSwift */; };
 		BBFF66B22836233F00C68F6A /* StyleViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */; };
 		BBFF66B4283626DE00C68F6A /* CapsuleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B3283626DE00C68F6A /* CapsuleText.swift */; };
+		BBFF66B9283633FC00C68F6A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B8283633FC00C68F6A /* EmptyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewModifiers.swift; sourceTree = "<group>"; };
 		BBFF66B3283626DE00C68F6A /* CapsuleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleText.swift; sourceTree = "<group>"; };
+		BBFF66B8283633FC00C68F6A /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				BBFF66B3283626DE00C68F6A /* CapsuleText.swift */,
+				BBFF66B8283633FC00C68F6A /* EmptyView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */,
 				BBFF669B28338F6800C68F6A /* PopupAddToFavsView.swift in Sources */,
 				BBFF66B4283626DE00C68F6A /* CapsuleText.swift in Sources */,
+				BBFF66B9283633FC00C68F6A /* EmptyView.swift in Sources */,
 				BBFF667D282D290700C68F6A /* CategoriesVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
