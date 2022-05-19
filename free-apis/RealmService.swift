@@ -11,6 +11,8 @@ import SwiftUI
 
 struct RealmService: DynamicProperty {
     
+    private let realm = try! Realm()
+    
     @ObservedResults(FreeApiRLM.self) var favoritedAPIs
     
     func unFavorite(at index: IndexSet) {
@@ -29,4 +31,11 @@ struct RealmService: DynamicProperty {
         }
         
     }
+    
+    func deleteEverything() {
+        try! realm.write {
+            realm.deleteAll()
+        }
+    }
+    
 }

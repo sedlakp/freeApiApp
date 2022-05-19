@@ -40,6 +40,7 @@
 		BBFF66B22836233F00C68F6A /* StyleViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */; };
 		BBFF66B4283626DE00C68F6A /* CapsuleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B3283626DE00C68F6A /* CapsuleText.swift */; };
 		BBFF66B9283633FC00C68F6A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B8283633FC00C68F6A /* EmptyView.swift */; };
+		BBFF66BC283638E600C68F6A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66BB283638E600C68F6A /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewModifiers.swift; sourceTree = "<group>"; };
 		BBFF66B3283626DE00C68F6A /* CapsuleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleText.swift; sourceTree = "<group>"; };
 		BBFF66B8283633FC00C68F6A /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		BBFF66BB283638E600C68F6A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		BBFF666E282D145900C68F6A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BBFF66BA283638CB00C68F6A /* Settings */,
 				BBFF666F282D146500C68F6A /* FreeApisView */,
 				BBFF667E282D291300C68F6A /* CategoriesView */,
 				BBFF6684282E809200C68F6A /* FavoritesView */,
@@ -265,6 +268,14 @@
 				BBFF66B8283633FC00C68F6A /* EmptyView.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		BBFF66BA283638CB00C68F6A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BBFF66BB283638E600C68F6A /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +443,7 @@
 				BBFF66B4283626DE00C68F6A /* CapsuleText.swift in Sources */,
 				BBFF66B9283633FC00C68F6A /* EmptyView.swift in Sources */,
 				BBFF667D282D290700C68F6A /* CategoriesVM.swift in Sources */,
+				BBFF66BC283638E600C68F6A /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

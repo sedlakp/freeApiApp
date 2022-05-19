@@ -9,6 +9,9 @@ import SwiftUI
 
 struct OnboardingPageView: View {
     
+    // using this to dismiss the onboarding when opened from settings
+    @Environment(\.presentationMode) var presentationMode
+    
     @AppStorage("completedOnboarding") private var completedOnboarding = false
     
     let page: OnboardingPageContent
@@ -51,6 +54,7 @@ struct OnboardingPageView: View {
                 Button {
                     //UserDefaults.standard.set(true, forKey: "completedOnboarding")
                     completedOnboarding = true
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Finish Onboarding")
                 }.buttonStyle(AppButton())

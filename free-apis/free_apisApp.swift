@@ -46,6 +46,9 @@ struct free_apisApp: App {
                     FavoriteApisView().tabItem {
                         Label("Favorited", systemImage: "star").font(Font.rubik.semiBoldMini)
                             }.tag(2)
+                    SettingsView().tabItem {
+                        Label("Settings", systemImage: "gear").font(Font.rubik.semiBoldMini)
+                            }.tag(3)
                 }.accentColor(Color(uiColor: .label))
             }
         }
