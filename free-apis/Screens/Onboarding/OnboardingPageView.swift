@@ -26,10 +26,8 @@ struct OnboardingPageView: View {
                 .shadow(radius: 2)
             Spacer().frame(height: 5)
             switch page {
-            case .Intro:
+            case .Intro, .LightDark:
                 Text(page.detailContent.first!)
-                    //.fixedSize(horizontal: false, vertical: true)
-                    //.lineLimit(nil)
                     .font(Font.rubik.regular)
                     .multilineTextAlignment(.center)
                     .padding()
@@ -55,13 +53,7 @@ struct OnboardingPageView: View {
                     completedOnboarding = true
                 } label: {
                     Text("Finish Onboarding")
-                        .font(Font.rubik.regular)
-                        .padding()
-                        .background(.teal)
-                        .foregroundColor(.white)
-                        .cornerRadius(14)
-                        .shadow(radius: 2)
-                }
+                }.buttonStyle(AppButton())
 
             }
             

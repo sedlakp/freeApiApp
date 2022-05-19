@@ -28,3 +28,16 @@ fileprivate struct TagText: ViewModifier {
             .cornerRadius(3)
     }
 }
+
+
+struct AppButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        return configuration.label
+                .font(Font.rubik.regular)
+                .padding()
+                .background(.teal)
+                .foregroundColor(.white)
+                .cornerRadius(14)
+                .shadow(radius: 2)
+    }
+}

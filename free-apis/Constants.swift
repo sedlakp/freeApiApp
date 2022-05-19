@@ -27,11 +27,14 @@ enum ApiPaths: CustomStringConvertible {
 
 enum OnboardingPageContent: CaseIterable {
     case Intro
+    case LightDark
     case Features
     
     var hasButton: Bool {
         switch self {
         case .Intro:
+            return false
+        case .LightDark:
             return false
         case .Features:
             return true
@@ -42,6 +45,8 @@ enum OnboardingPageContent: CaseIterable {
         switch self {
         case .Intro:
             return "Welcome"
+        case .LightDark:
+            return "Light & Dark"
         case .Features:
             return "Features"
         }
@@ -52,6 +57,10 @@ enum OnboardingPageContent: CaseIterable {
         case .Intro:
             return [
                 "Hello, this app shows a list of free apis to use in your next project."
+            ]
+        case .LightDark:
+            return [
+                "Looks nice in both light and dark appearance."
             ]
         case .Features:
             return [
@@ -67,6 +76,8 @@ enum OnboardingPageContent: CaseIterable {
         switch self {
         case .Intro:
             return "sun.and.horizon"
+        case .LightDark:
+            return "circle.righthalf.filled"
         case .Features:
             return "seal"
         }

@@ -15,6 +15,13 @@ struct PopupAddToFavsView: View {
     @Binding var noteText: String
     @Binding var showAddToFavPopup: Bool
     
+    fileprivate func addToFavorites() {
+        rs.addToFavorites(selectedAPI!, noteText)
+        showAddToFavPopup = false
+        noteText = ""
+        selectedAPI = nil
+    }
+    
     var body: some View {
         VStack {
             Text("You can add a note to \(selectedAPI?.API ?? "API") before adding to favorites")
@@ -31,18 +38,11 @@ struct PopupAddToFavsView: View {
                     )
                 .cornerRadius(16)
             Button {
-                rs.addToFavorites(selectedAPI!, noteText)
-                showAddToFavPopup = false
-                noteText = ""
-                selectedAPI = nil
+                addToFavorites()
             } label: {
                 Text("Add to favorites")
-                    .font(Font.rubik.regular)
-                    .padding(EdgeInsets(top: 8, leading: 15, bottom: 8, trailing: 15))
-                    .foregroundColor(.white)
-                    .background(.teal)
-                    .cornerRadius(16)
-            }//.frame(height: 20, alignment: .center)
+            }.buttonStyle(AppButton())
+            
             Spacer()
         }.padding()
             .background(Color(UIColor.systemBackground))
