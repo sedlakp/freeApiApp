@@ -28,49 +28,29 @@ struct FreeApiCellView: View {
                     Text(freeApi.API).font(Font.rubik.bold)
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer()
-                    ZStack {
-                        Capsule(style: .circular).foregroundColor(.teal)
-                        Text(freeApi.Category)
-                            .foregroundColor(.white)
-                            .frame(alignment:.trailing)
-                            .font(Font.rubik.semiBoldSmall)
-                            .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                    }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
+                    CapsuleText(text: freeApi.Category)
                 }
                 Divider()
                 HStack {
                     if freeApi.HTTPS {
                         Text("HTTPS")
-                            .font(Font.rubik.semiBoldMini)
-                            .foregroundColor(.white)
-                        .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                        .background(.green)
-                        .cornerRadius(3)
+                            .tagText(tagBackground: .green, tagTextColor: .white)
                     }
                 
                     if !freeApi.Auth.isEmpty {
                         Text(freeApi.Auth)
-                            .font(Font.rubik.semiBoldMini)
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                            .background(.yellow)
-                            .cornerRadius(3)
+                            .tagText(tagBackground: .yellow, tagTextColor: .black)
                     }
                     
                     if freeApi.isCors {
                         Text("CORS")
-                            .font(Font.rubik.semiBoldMini)
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                            .background(.brown)
-                            .cornerRadius(3)
+                            .tagText(tagBackground: .brown, tagTextColor: .white)
                     }
                 }
 
                 HStack {
                     Text(freeApi.Description).font(Font.rubik.regular)
                         .foregroundColor(.gray)
-                    //.lineLimit(nil)
                         .fixedSize(horizontal: false, vertical: true)
                 }.padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             
@@ -85,10 +65,6 @@ struct FreeApiCellView: View {
                                 .frame(height: 40)
                             Image(systemName: "heart.fill").foregroundColor(Color(uiColor:.systemGray5))
                         }
-    //                    Image(systemName: "heart.circle.fill")
-    //                        .resizable()
-    //                        .foregroundColor(.indigo)
-    //                        .frame(width: 40, height: 40)
                     }.buttonStyle(PlainButtonStyle())
                     
                     Spacer()
@@ -100,7 +76,6 @@ struct FreeApiCellView: View {
                             .resizable()
                             .foregroundColor(.orange)
                             .frame(width: 40, height: 40)
-
                     }
                     .sheet(isPresented: $showWebView) {
                         SafariView(url: URL(string: freeApi.Link)!)

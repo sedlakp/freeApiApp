@@ -21,45 +21,30 @@ struct FavoriteCellView: View {
                     Text(rlmAPI.API).font(Font.rubik.bold)
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer()
-                    ZStack {
-                        Capsule(style: .circular).foregroundColor(.teal)
-                        Text(rlmAPI.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.rubik.semiBoldSmall).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                    }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
+                    CapsuleText(text: rlmAPI.Category)
                 }
                 Divider()
                 HStack {
                     if rlmAPI.HTTPS {
                         Text("HTTPS")
-                            .font(Font.rubik.semiBoldMini)
-                            .foregroundColor(.white)
-                        .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                        .background(.green)
-                        .cornerRadius(3)
+                            .tagText(tagBackground: .green, tagTextColor: .white)
                     }
                 
                     if !rlmAPI.Auth.isEmpty {
                         Text(rlmAPI.Auth)
-                            .font(Font.rubik.semiBoldMini)
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                            .background(.yellow)
-                            .cornerRadius(3)
+                            .tagText(tagBackground: .yellow, tagTextColor: .black)
                     }
                     
                     if rlmAPI.isCors {
                         Text("CORS")
-                            .font(Font.rubik.semiBoldMini)
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                            .background(.brown)
-                            .cornerRadius(3)
+                            .tagText(tagBackground: .brown, tagTextColor: .white)
                     }
                 }
 
                 HStack {
-                    Text(rlmAPI.Description).font(Font.rubik.regular)
+                    Text(rlmAPI.Description)
+                        .font(Font.rubik.regular)
                         .foregroundColor(.gray)
-                    //.lineLimit(nil)
                         .fixedSize(horizontal: false, vertical: true)
                 }.padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
             

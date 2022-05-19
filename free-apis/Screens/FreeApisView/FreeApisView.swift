@@ -37,9 +37,6 @@ struct FreeApisView: View {
                 .sheet(isPresented: $showAddToFavPopup, content: {
                     PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)
                 })
-//                .popup(isPresented: $showAddToFavPopup, closeOnTap: true, closeOnTapOutside: false) {
-//                    PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)
-//                }
         }
 
     }

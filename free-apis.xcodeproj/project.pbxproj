@@ -37,6 +37,8 @@
 		BBFF66A72834CE5600C68F6A /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A42834CE5600C68F6A /* Rubik-SemiBold.ttf */; };
 		BBFF66A82834CE5600C68F6A /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */; };
 		BBFF66AE2834DFD600C68F6A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF66AD2834DFD600C68F6A /* IQKeyboardManagerSwift */; };
+		BBFF66B22836233F00C68F6A /* StyleViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */; };
+		BBFF66B4283626DE00C68F6A /* CapsuleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B3283626DE00C68F6A /* CapsuleText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		BBFF66A32834CE5600C68F6A /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		BBFF66A42834CE5600C68F6A /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
 		BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewModifiers.swift; sourceTree = "<group>"; };
+		BBFF66B3283626DE00C68F6A /* CapsuleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 				BBFF6672282D153A00C68F6A /* Constants.swift */,
 				BBFF6689282FAE5500C68F6A /* RealmService.swift */,
 				BBFF66A02834CA7100C68F6A /* FontEx.swift */,
+				BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */,
+				BBFF66B52836277400C68F6A /* CustomViews */,
 				BBFF666E282D145900C68F6A /* Screens */,
 				BBFF666B282D133E00C68F6A /* Models */,
 				BBFF6645282D12E400C68F6A /* Assets.xcassets */,
@@ -248,6 +254,14 @@
 				BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */,
 			);
 			path = Rubik;
+			sourceTree = "<group>";
+		};
+		BBFF66B52836277400C68F6A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				BBFF66B3283626DE00C68F6A /* CapsuleText.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +415,7 @@
 				BBFF6686282E80BA00C68F6A /* FavoriteApisView.swift in Sources */,
 				BBFF6688282E80CB00C68F6A /* FavoriteApisVM.swift in Sources */,
 				BBFF6671282D147A00C68F6A /* FreeApisVM.swift in Sources */,
+				BBFF66B22836233F00C68F6A /* StyleViewModifiers.swift in Sources */,
 				BBFF6675282D1A6300C68F6A /* FreeApiCellView.swift in Sources */,
 				BBFF668A282FAE5500C68F6A /* RealmService.swift in Sources */,
 				BBFF668F28321A9500C68F6A /* OnboardingPageView.swift in Sources */,
@@ -411,6 +426,7 @@
 				BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */,
 				BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */,
 				BBFF669B28338F6800C68F6A /* PopupAddToFavsView.swift in Sources */,
+				BBFF66B4283626DE00C68F6A /* CapsuleText.swift in Sources */,
 				BBFF667D282D290700C68F6A /* CategoriesVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
