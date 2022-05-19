@@ -25,6 +25,7 @@ struct CategoriesView: View {
                     Section(content: {
                         FreeApiCellView(selectedAPI: $selectedAPI, showPopup: $showAddToFavPopup, isDividerShown: false, freeApi: vm.randomApi!)
                             .buttonStyle(PlainButtonStyle())
+                            .listRowInsets(EdgeInsets()) // remove default padding, set padding inside the cell instead
                     }, header: {
                         Text("Random API").font(Font.rubik.semiBold)
                     })

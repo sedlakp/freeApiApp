@@ -22,15 +22,19 @@ struct FreeApiCellView: View {
     let freeApi: FreeApi
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
             VStack(alignment: .leading) {
-                HStack{
+                HStack {
                     Text(freeApi.API).font(Font.rubik.bold)
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                     ZStack {
                         Capsule(style: .circular).foregroundColor(.teal)
-                        Text(freeApi.Category).foregroundColor(.white).frame(alignment: .trailing).font(Font.rubik.semiBoldSmall).padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                        Text(freeApi.Category)
+                            .foregroundColor(.white)
+                            .frame(alignment:.trailing)
+                            .font(Font.rubik.semiBoldSmall)
+                            .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                     }.fixedSize(horizontal: true, vertical: true) // this makes the views dynamic
                 }
                 Divider()
