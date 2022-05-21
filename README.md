@@ -9,6 +9,14 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 * [App architecture](https://heckj.github.io/swiftui-notes/)
 * ...and others
 
+## App features
+* Onboarding on first app launch
+* Exploring APIs by categories
+* Viewing API website
+* Filtering APIs based on tags (Auth, https, CORS)
+* Favorite APIs (Persisted in a Realm database)
+* Adding and editing notes to favorited APIs
+
 ## App screenshots
 
 Screen with random API and list of categories  
