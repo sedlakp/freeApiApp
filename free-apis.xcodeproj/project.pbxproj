@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */; };
 		BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6641282D12E100C68F6A /* free_apisApp.swift */; };
 		BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6643282D12E100C68F6A /* FreeApisView.swift */; };
 		BBFF6646282D12E400C68F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFF6645282D12E400C68F6A /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterView.swift; sourceTree = "<group>"; };
 		BBFF663E282D12E100C68F6A /* free-apis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-apis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFF6641282D12E100C68F6A /* free_apisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = free_apisApp.swift; sourceTree = "<group>"; };
 		BBFF6643282D12E100C68F6A /* FreeApisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeApisView.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				BBFF6670282D147A00C68F6A /* FreeApisVM.swift */,
 				BBFF6674282D1A6300C68F6A /* FreeApiCellView.swift */,
 				BBFF669A28338F6800C68F6A /* PopupAddToFavsView.swift */,
+				BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */,
 			);
 			path = FreeApisView;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				BBFF667B282D28FB00C68F6A /* CategoriesView.swift in Sources */,
 				BBFF6673282D153A00C68F6A /* Constants.swift in Sources */,
 				BBFF666D282D135500C68F6A /* FreeApi.swift in Sources */,
+				BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */,
 				BBFF66992832562700C68F6A /* FavoriteCellView.swift in Sources */,
 				BBFF6686282E80BA00C68F6A /* FavoriteApisView.swift in Sources */,
 				BBFF6688282E80CB00C68F6A /* FavoriteApisVM.swift in Sources */,

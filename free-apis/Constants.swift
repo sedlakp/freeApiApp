@@ -83,3 +83,10 @@ enum OnboardingPageContent: CaseIterable {
         }
     }
 }
+
+
+enum FilterTags: String, CaseIterable {
+    case Cors
+    case HTTPS
+    case Auth
+}

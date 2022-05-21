@@ -13,12 +13,28 @@ import RealmSwift
 class FreeApisVM: ObservableObject, DynamicProperty {
     
     @Published var freeApis: [FreeApi] = []
-    
+    @Published var selectedTags: Set<FilterTags> = Set<FilterTags>()
     @Published var searchText: String = ""
     
     /// Looks for a string in api's name or its description
     var searchMatch: [FreeApi] {
-        return searchText.isEmpty ? freeApis : freeApis.filter { $0.API.contains(searchText) || $0.Description.contains(searchText) }
+        return searchText.isEmpty ? filteredApis : filteredApis.filter { $0.API.contains(searchText) || $0.Description.contains(searchText) }
+    }
+    
+    private var filteredApis: [FreeApi] {
+        var filtered = freeApis
+        // filtering is done three times if the selectedTags has all three cases, ideal would be just one filtering through compound nspredicate
+        if selectedTags.contains(.Cors) {
+            filtered = filtered.filter{ $0.isCors }
+        }
+        if selectedTags.contains(.HTTPS) {
+            filtered = filtered.filter{ $0.HTTPS }
+        }
+        if selectedTags.contains(.Auth) {
+            filtered = filtered.filter{ !$0.Auth.isEmpty}
+        }
+        
+        return filtered
     }
     
     private var getEntriesTask: AnyCancellable?

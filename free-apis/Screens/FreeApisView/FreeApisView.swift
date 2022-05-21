@@ -21,6 +21,7 @@ struct FreeApisView: View {
     
     @State private var selectedAPI: FreeApi?
     @State private var showAddToFavPopup: Bool = false
+    @State private var showFilterPopup: Bool = false
     @State private var noteText: String = ""
     
     @ObservedObject private var vm = FreeApisVM()
@@ -42,13 +43,23 @@ struct FreeApisView: View {
                     .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets()) // remove default padding, set padding inside the cell instead
             }
-            .searchable(text: $vm.searchText, prompt: "Search by a keyword")
-            .navigationTitle(Text(category ?? "Public APIs"))//not visible if not wrapped inside a navigation view
-            .navigationBarTitleDisplayMode(.inline)
+                .searchable(text: $vm.searchText, prompt: "Search by a keyword")
+                .navigationTitle(Text(category ?? "Public APIs"))//not visible if not wrapped inside a navigation view
+                .navigationBarTitleDisplayMode(.inline)
                 .environmentObject(vm)
                 .sheet(isPresented: $showAddToFavPopup, content: {
                     PopupAddToFavsView(selectedAPI: $selectedAPI, noteText: $noteText, showAddToFavPopup: $showAddToFavPopup)
                 })
+                .toolbar(content: {
+                    Button {
+                        showFilterPopup = true
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
+                    }
+                })
+                .sheet(isPresented: $showFilterPopup) {
+                    TagFilterView(selectedTags: $vm.selectedTags)
+                }
         }
 
     }
