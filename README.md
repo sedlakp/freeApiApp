@@ -11,8 +11,13 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 
 ## App screenshots
 
-![Categories](/screenshots/IMG_5932.PNG)
-![Entertainment Category](/screenshots/IMG_5934.PNG)
-![Favorites](/screenshots/IMG_5933.PNG)
+Screen with random API and list of categories  
+<img src="/screenshots/IMG_5932.PNG" width="200">
+
+APIs related to the Entertainment category  
+<img src="/screenshots/IMG_5934.PNG" width="200">
+
+Favorited APIs screen  
+<img src="/screenshots/IMG_5933.PNG" width="200">
 
 
