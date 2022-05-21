@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */; };
+		BBA9C8B42838921F00FC6973 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA9C8B62838921F00FC6973 /* Localizable.strings */; };
 		BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6641282D12E100C68F6A /* free_apisApp.swift */; };
 		BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6643282D12E100C68F6A /* FreeApisView.swift */; };
 		BBFF6646282D12E400C68F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFF6645282D12E400C68F6A /* Assets.xcassets */; };
@@ -63,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterView.swift; sourceTree = "<group>"; };
+		BBA9C8B52838921F00FC6973 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BBA9C8B72838927000FC6973 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBFF663E282D12E100C68F6A /* free-apis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-apis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFF6641282D12E100C68F6A /* free_apisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = free_apisApp.swift; sourceTree = "<group>"; };
 		BBFF6643282D12E100C68F6A /* FreeApisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeApisView.swift; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				BBFF669428323D8900C68F6A /* Info.plist */,
+				BBA9C8B62838921F00FC6973 /* Localizable.strings */,
 				BBFF6641282D12E100C68F6A /* free_apisApp.swift */,
 				BBFF6672282D153A00C68F6A /* Constants.swift */,
 				BBFF6689282FAE5500C68F6A /* RealmService.swift */,
@@ -373,6 +377,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = BBFF6635282D12E100C68F6A;
 			packageReferences = (
@@ -397,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFF66A82834CE5600C68F6A /* Rubik-Regular.ttf in Resources */,
+				BBA9C8B42838921F00FC6973 /* Localizable.strings in Resources */,
 				BBFF66A62834CE5600C68F6A /* Rubik-Bold.ttf in Resources */,
 				BBFF66A72834CE5600C68F6A /* Rubik-SemiBold.ttf in Resources */,
 				BBFF6649282D12E400C68F6A /* Preview Assets.xcassets in Resources */,
@@ -483,11 +489,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		BBA9C8B62838921F00FC6973 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBA9C8B52838921F00FC6973 /* en */,
+				BBA9C8B72838927000FC6973 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		BBFF6660282D12E400C68F6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -548,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

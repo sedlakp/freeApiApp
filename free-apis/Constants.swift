@@ -44,11 +44,11 @@ enum OnboardingPageContent: CaseIterable {
     var titleText: String {
         switch self {
         case .Intro:
-            return "Welcome"
+            return "Onboarding.Welcome".localize()
         case .LightDark:
-            return "Light & Dark"
+            return "Onboarding.LightDark".localize()
         case .Features:
-            return "Features"
+            return "Onboarding.Features".localize()
         }
     }
     
@@ -56,18 +56,18 @@ enum OnboardingPageContent: CaseIterable {
         switch self {
         case .Intro:
             return [
-                "Hello, this app shows a list of public apis to use in your next project."
+                "Onboarding.Welcome.Text".localize()
             ]
         case .LightDark:
             return [
-                "Looks nice in both light and dark appearance."
+                "Onboarding.LightDark.Text".localize()
             ]
         case .Features:
             return [
-                "Look up APIs based on category or a keyword",
-                "Mark your favorite APIs",
-                "Add a comment to favorited API",
-                "Random API everytime you open the app, so exciting!",
+                "Onboarding.Features.1".localize(),
+                "Onboarding.Features.2".localize(),
+                "Onboarding.Features.3".localize(),
+                "Onboarding.Features.2".localize(),
             ]
         }
     }
@@ -89,4 +89,10 @@ enum FilterTags: String, CaseIterable {
     case Cors
     case HTTPS
     case Auth
+}
+
+extension String {
+    func localize() -> Self {
+        return NSLocalizedString(self, comment: "")
+    }
 }

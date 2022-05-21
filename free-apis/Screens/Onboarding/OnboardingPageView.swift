@@ -26,7 +26,7 @@ struct OnboardingPageView: View {
             Spacer().frame(width: 40, height: 40)
             Text(page.titleText)
                 .font(Font.rubik.regularTitle)
-                .shadow(radius: 2)
+                .shadow(radius: 1)
             Spacer().frame(height: 5)
             switch page {
             case .Intro, .LightDark:
@@ -56,7 +56,7 @@ struct OnboardingPageView: View {
                     completedOnboarding = true
                     presentationMode.wrappedValue.dismiss()
                 } label: {
-                    Text("Finish Onboarding")
+                    Text("Onboarding.Finish".localize())
                 }.buttonStyle(AppButton())
 
             }

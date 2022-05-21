@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  free-apis
+
+  Created by Petr Sedlák on 21.05.2022.
+  
+*/
+
+"Onboarding.Welcome" = "ようこそ";
+"Onboarding.LightDark" = "ライト & ダーク";
+"Onboarding.Features" = "機能";
+"Onboarding.Welcome.Text" = "こんにちは、このアプリで色々な公共APIを探せる。次のプロジェクトに役に立つかも。";
+"Onboarding.LightDark.Text" = "両方ライトとダークモードがあります。";
+"Onboarding.Features.1" = "APIをキーワードで探せる";
+"Onboarding.Features.2" = "APIをお気に入りに追加できる";
+"Onboarding.Features.3" = "気に入ったAPIにコメントを追加できる";
+"Onboarding.Features.4" = "アプリを開くと、ランダムなAPIが提案される！";
+"Onboarding.Finish" = "了解";

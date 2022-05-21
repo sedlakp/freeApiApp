@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  free-apis
+
+  Created by Petr Sedlák on 21.05.2022.
+  
+*/
+
+"Onboarding.Welcome" = "Welcome";
+"Onboarding.LightDark" = "Light & Dark";
+"Onboarding.Features" = "Features";
+"Onboarding.Welcome.Text" = "Hello, this app shows a list of public apis to use in your next project.";
+"Onboarding.LightDark.Text" = "Looks nice in both light and dark appearance.";
+"Onboarding.Features.1" = "Look up APIs based on category or a keyword";
+"Onboarding.Features.2" = "Mark your favorite APIs";
+"Onboarding.Features.3" = "Add a comment to favorited API";
+"Onboarding.Features.4" = "Random API everytime you open the app, so exciting!";
+"Onboarding.Finish" = "Finish Onboarding";

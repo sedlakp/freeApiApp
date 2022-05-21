@@ -12,6 +12,8 @@
 	<dict>
 		<key>UIImageName</key>
 		<string>apis</string>
+		<key>UIImageRespectsSafeAreaInsets</key>
+		<true/>
 		<key>UILaunchScreen</key>
 		<dict/>
 	</dict>
