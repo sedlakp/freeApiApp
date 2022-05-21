@@ -10,12 +10,17 @@
 	</array>
 	<key>UILaunchScreen</key>
 	<dict>
+		<key>UIColorName</key>
+		<string></string>
 		<key>UIImageName</key>
 		<string>apis</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
 		<true/>
 		<key>UILaunchScreen</key>
-		<dict/>
+		<dict>
+			<key>New item</key>
+			<string></string>
+		</dict>
 	</dict>
 </dict>
 </plist>
