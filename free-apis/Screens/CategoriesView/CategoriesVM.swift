@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class CategoriesVM: ObservableObject {
+class CategoriesVM: AppViewModel, ObservableObject {
     
     @Published var categories: [String] = []
     
@@ -19,25 +19,29 @@ class CategoriesVM: ObservableObject {
     
     private var getRandomTask: AnyCancellable?
     
+    private func getRandomRequest(for url: URL) -> AnyPublisher<FreeApisWrap, Error> {
+        return getRequest(for: url)
+    }
+    
+    private func getCategoriesRequest(for url: URL) -> AnyPublisher<CategoriesWrapper, Error> {
+        return getRequest(for: url)
+    }
+    
     public func getCategories() {
-        getCategoriesTask = URLSession.shared.dataTaskPublisher(for: URL(string: "\(BaseApiURL)\(ApiPaths.cateogires)")!)
-            .map { $0.data }
-            .decode(type: CategoriesWrapper.self, decoder: JSONDecoder())
+        let url = URL(string: "\(BaseApiURL)\(ApiPaths.cateogires)")!
+        
+        getCategoriesTask = getCategoriesRequest(for: url)
             .map{ $0.categories }
             .replaceError(with: [])
-            .eraseToAnyPublisher()
-            .receive(on: RunLoop.main)
             .assign(to: \Self.categories, on: self)
     }
     
     public func getRandom() {
-        getRandomTask = URLSession.shared.dataTaskPublisher(for: URL(string: "\(BaseApiURL)\(ApiPaths.randomApi)")!)
-            .map { $0.data }
-            .decode(type: FreeApisWrap.self, decoder: JSONDecoder())
+        let url = URL(string: "\(BaseApiURL)\(ApiPaths.randomApi)")!
+        
+        getRandomTask = getRandomRequest(for: url)
             .map{ $0.entries.first }
             .replaceError(with: nil)
-            .eraseToAnyPublisher()
-            .receive(on: RunLoop.main)
             .assign(to: \Self.randomApi, on: self)
     }
     

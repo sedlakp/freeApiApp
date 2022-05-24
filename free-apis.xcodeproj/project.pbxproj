@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0F0FDC283CF3C400B3AB12 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */; };
 		BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */; };
 		BBA9C8B42838921F00FC6973 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA9C8B62838921F00FC6973 /* Localizable.strings */; };
 		BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6641282D12E100C68F6A /* free_apisApp.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterView.swift; sourceTree = "<group>"; };
 		BBA9C8B52838921F00FC6973 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBA9C8B72838927000FC6973 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				BBA9C8B62838921F00FC6973 /* Localizable.strings */,
 				BBFF6641282D12E100C68F6A /* free_apisApp.swift */,
 				BBFF6672282D153A00C68F6A /* Constants.swift */,
+				BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */,
 				BBFF6689282FAE5500C68F6A /* RealmService.swift */,
 				BBFF66A02834CA7100C68F6A /* FontEx.swift */,
 				BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */,
@@ -433,6 +436,7 @@
 			files = (
 				BBFF667B282D28FB00C68F6A /* CategoriesView.swift in Sources */,
 				BBFF6673282D153A00C68F6A /* Constants.swift in Sources */,
+				BB0F0FDC283CF3C400B3AB12 /* AppViewModel.swift in Sources */,
 				BBFF666D282D135500C68F6A /* FreeApi.swift in Sources */,
 				BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */,
 				BBFF66992832562700C68F6A /* FavoriteCellView.swift in Sources */,

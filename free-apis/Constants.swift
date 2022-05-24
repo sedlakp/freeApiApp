@@ -96,3 +96,7 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
 }
+
+enum APIErrors: Error {
+    case RequestFailedError
+}

@@ -17,6 +17,7 @@ struct MainFreeApisView: View {
     }
 }
 
+// The public api list does not change often so refresh does not make sense
 struct FreeApisView: View {
     
     @State private var selectedAPI: FreeApi?
@@ -31,7 +32,23 @@ struct FreeApisView: View {
     var category: String?
     
     var body: some View {
-        if vm.freeApis.isEmpty {
+        if vm.showRetry {
+            VStack(alignment: .center, spacing: 20) {
+                Image(systemName: "exclamationmark.triangle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 100, alignment: .center)
+                    .shadow(radius: 2)
+                Text("Could not get list of APIs").font(Font.rubik.regular)
+                Button {
+                    //vm.getEntries(for: category) // not needed because after show retry is set to false the empty screen appears, triggering the request
+                    vm.showRetry = false
+                } label: {
+                    Text("Try Again")
+                }.buttonStyle(AppButton())
+            }
+
+        } else if vm.freeApis.isEmpty {
             ProgressView().onAppear {
                 vm.getEntries(for: category)
             }.navigationTitle(Text(category ?? "Public APIs"))

@@ -10,11 +10,13 @@ import SwiftUI
 import Combine
 import RealmSwift
 
-class FreeApisVM: ObservableObject, DynamicProperty {
+class FreeApisVM: AppViewModel, ObservableObject, DynamicProperty {
     
     @Published var freeApis: [FreeApi] = []
     @Published var selectedTags: Set<FilterTags> = Set<FilterTags>()
     @Published var searchText: String = ""
+    
+    @Published var showRetry: Bool = false
     
     /// Looks for a string in api's name or its description
     var searchMatch: [FreeApi] {
@@ -37,11 +39,32 @@ class FreeApisVM: ObservableObject, DynamicProperty {
         return filtered
     }
     
+    // keep the reference to the task, gets reassigned everytime the getEntries function is called
     private var getEntriesTask: AnyCancellable?
     
+    // function that only specifies the result type for the generic function
+    private func getEntriesRequest(for url: URL) -> AnyPublisher<FreeApisWrap, Error>{
+        return getRequest(for: url)
+    }
+    
     /// Func gets all either all api entries available if `category` is nil.
+    /// This function is accessible to the view to trigger the request
     public func getEntries(for category: String? = nil) {
         
+        getEntriesTask = getEntriesRequest(for: getUrl(for: category))
+            .mapError({ [weak self] error -> Error in
+                // show retry screen if an error happens, I could also return the error here and show it as a message
+                // I could also use closure instead of @Published property if I wanted to do something directly in the FreeApisViewß struct, but this way the logic stays here in VM
+                self?.showRetry = true
+                return error
+            })
+            .map{ $0.entries }
+            .replaceError(with: [])
+            .assign(to: \Self.freeApis, on: self)
+    }
+    
+    /// Constructs url for category request
+    private func getUrl(for category: String? = nil) -> URL {
         var requestURL: URL
         
         if let category = category {
@@ -53,15 +76,7 @@ class FreeApisVM: ObservableObject, DynamicProperty {
             requestURL = URL(string: "\(BaseApiURL)\(ApiPaths.entries)")!
         }
         print(requestURL)
-        getEntriesTask = URLSession.shared.dataTaskPublisher(for: requestURL)
-            .map { $0.data }
-            .decode(type: FreeApisWrap.self, decoder: JSONDecoder())
-            .map{ $0.entries }
-            .replaceError(with: [])
-            .eraseToAnyPublisher()
-            .receive(on: RunLoop.main)
-            .assign(to: \Self.freeApis, on: self)
+        return requestURL
     }
-    
     
 }
