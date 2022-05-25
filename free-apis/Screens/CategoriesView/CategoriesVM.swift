@@ -28,18 +28,14 @@ class CategoriesVM: AppViewModel, ObservableObject {
     }
     
     public func getCategories() {
-        let url = URL(string: "\(BaseApiURL)\(ApiPaths.cateogires)")!
-        
-        getCategoriesTask = getCategoriesRequest(for: url)
+        getCategoriesTask = getCategoriesRequest(for: ApiPaths.cateogires.url)
             .map{ $0.categories }
             .replaceError(with: [])
             .assign(to: \Self.categories, on: self)
     }
     
     public func getRandom() {
-        let url = URL(string: "\(BaseApiURL)\(ApiPaths.randomApi)")!
-        
-        getRandomTask = getRandomRequest(for: url)
+        getRandomTask = getRandomRequest(for: ApiPaths.randomApi.url)
             .map{ $0.entries.first }
             .replaceError(with: nil)
             .assign(to: \Self.randomApi, on: self)

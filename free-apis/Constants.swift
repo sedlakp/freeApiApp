@@ -15,12 +15,25 @@ enum ApiPaths: CustomStringConvertible {
     case entries
     case cateogires
     case randomApi
+    case categoryEntries(String)
     
     var description: String {
         switch self {
-        case .entries:              return "/entries"
-        case .cateogires:           return "/categories"
-        case .randomApi:            return "/random"
+        case .entries, .categoryEntries(_):         return "/entries"
+        case .cateogires:                           return "/categories"
+        case .randomApi:                            return "/random"
+        }
+    }
+    
+    var url: URL {
+        switch self {
+        case .cateogires, .entries, .randomApi:
+            return URL(string: "\(BaseApiURL)\(self)")!
+        case .categoryEntries(let string):
+            var url = URLComponents(string: "\(BaseApiURL)\(self)")!
+            let querys = [URLQueryItem(name: "category", value: string)]
+            url.queryItems = querys
+            return url.url!
         }
     }
 }

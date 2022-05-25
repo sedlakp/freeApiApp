@@ -50,8 +50,7 @@ class FreeApisVM: AppViewModel, ObservableObject, DynamicProperty {
     /// Func gets all either all api entries available if `category` is nil.
     /// This function is accessible to the view to trigger the request
     public func getEntries(for category: String? = nil) {
-        
-        getEntriesTask = getEntriesRequest(for: getUrl(for: category))
+        getEntriesTask = getEntriesRequest(for: category == nil ? ApiPaths.entries.url : ApiPaths.categoryEntries(category!).url)
             .mapError({ [weak self] error -> Error in
                 // show retry screen if an error happens, I could also return the error here and show it as a message
                 // I could also use closure instead of @Published property if I wanted to do something directly in the FreeApisViewß struct, but this way the logic stays here in VM
@@ -61,22 +60,6 @@ class FreeApisVM: AppViewModel, ObservableObject, DynamicProperty {
             .map{ $0.entries }
             .replaceError(with: [])
             .assign(to: \Self.freeApis, on: self)
-    }
-    
-    /// Constructs url for category request
-    private func getUrl(for category: String? = nil) -> URL {
-        var requestURL: URL
-        
-        if let category = category {
-            var url = URLComponents(string: "\(BaseApiURL)\(ApiPaths.entries)")!
-            let querys = [URLQueryItem(name: "category", value: category)]
-            url.queryItems = querys
-            requestURL = url.url!
-        } else {
-            requestURL = URL(string: "\(BaseApiURL)\(ApiPaths.entries)")!
-        }
-        print(requestURL)
-        return requestURL
     }
     
 }
