@@ -10,7 +10,6 @@
 		BB0F0FDC283CF3C400B3AB12 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */; };
 		BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */; };
 		BBA9C8B42838921F00FC6973 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA9C8B62838921F00FC6973 /* Localizable.strings */; };
-		BBABA3FA283E56150056221D /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = BBABA3F9283E56150056221D /* Introspect */; };
 		BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6641282D12E100C68F6A /* free_apisApp.swift */; };
 		BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6643282D12E100C68F6A /* FreeApisView.swift */; };
 		BBFF6646282D12E400C68F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFF6645282D12E400C68F6A /* Assets.xcassets */; };
@@ -112,7 +111,6 @@
 			files = (
 				BBFF66972832438200C68F6A /* PopupView in Frameworks */,
 				BBFF66AE2834DFD600C68F6A /* IQKeyboardManagerSwift in Frameworks */,
-				BBABA3FA283E56150056221D /* Introspect in Frameworks */,
 				BBFF6683282E7EC300C68F6A /* RealmSwift in Frameworks */,
 				BBFF6681282E7EC300C68F6A /* Realm in Frameworks */,
 			);
@@ -311,7 +309,6 @@
 				BBFF6682282E7EC300C68F6A /* RealmSwift */,
 				BBFF66962832438200C68F6A /* PopupView */,
 				BBFF66AD2834DFD600C68F6A /* IQKeyboardManagerSwift */,
-				BBABA3F9283E56150056221D /* Introspect */,
 			);
 			productName = "free-apis";
 			productReference = BBFF663E282D12E100C68F6A /* free-apis.app */;
@@ -390,7 +387,6 @@
 				BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */,
 				BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */,
 				BBFF66AC2834DFD600C68F6A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				BBABA3F8283E56150056221D /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = BBFF663F282D12E100C68F6A /* Products */;
 			projectDirPath = "";
@@ -806,14 +802,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BBABA3F8283E56150056221D /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.4;
-			};
-		};
 		BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -841,11 +829,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BBABA3F9283E56150056221D /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBABA3F8283E56150056221D /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
 		BBFF6680282E7EC300C68F6A /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */;
