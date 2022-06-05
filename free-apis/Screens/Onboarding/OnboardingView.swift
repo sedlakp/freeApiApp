@@ -10,8 +10,8 @@ import SwiftUI
 struct OnboardingView: View {
     
     init() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = .black
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+        UIPageControl.appearance().pageIndicatorTintColor = .label.withAlphaComponent(0.2)
+        UIPageControl.appearance().currentPageIndicatorTintColor = .label
     }
     
     var body: some View {
