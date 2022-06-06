@@ -1,6 +1,8 @@
 # Public API list app
 I am using this project to learn SwiftUI and to refresh and improve my Swift knowledge.
 
+<img src="/screenshots/icon.png" width="100">  
+
 ## Used API
 [Public APIs github project](https://github.com/public-apis/public-apis)
 
