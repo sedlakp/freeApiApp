@@ -9,6 +9,7 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 ## Used resources
 * [Reactive programming (Combine)](https://iosapptemplates.com/blog/swiftui/mvvm-combine-swiftui)
 * [App architecture](https://heckj.github.io/swiftui-notes/)
+* [Widgets](https://useyourloaf.com/blog/widgetkit-for-ios-getting-started/)
 * ...and others
 
 ## App features
@@ -18,11 +19,13 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 * Filtering APIs based on tags (Auth, https, CORS)
 * Favorite APIs (Persisted in a Realm database)
 * Adding and editing notes to favorited APIs
+* Widget that shows a different random public API every day
 
 ## App screenshots
 
-|Screen with random API and list of categories  |APIs related to the Entertainment category  |Favorited APIs screen  |
+|Screen with random API and list of categories  | APIs related to the Entertainment category  |Favorited APIs screen  |
 |----|-----|------|
 |<img src="/screenshots/IMG_5932.PNG" width="200">|<img src="/screenshots/IMG_5934.PNG" width="200">|<img src="/screenshots/IMG_5933.PNG" width="200">|
-
+| Widget  |
+|<img src="/screenshots/widget.png" width="200">|
 
