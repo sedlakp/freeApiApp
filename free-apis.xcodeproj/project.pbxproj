@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		BB0F0FDC283CF3C400B3AB12 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */; };
+		BB7C3CFA287133C10046D7F5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7C3CF9287133C10046D7F5 /* WidgetKit.framework */; };
+		BB7C3CFC287133C10046D7F5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7C3CFB287133C10046D7F5 /* SwiftUI.framework */; };
+		BB7C3CFF287133C10046D7F5 /* RandomAPIWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C3CFE287133C10046D7F5 /* RandomAPIWidget.swift */; };
+		BB7C3D01287133C20046D7F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7C3D00287133C20046D7F5 /* Assets.xcassets */; };
+		BB7C3D05287133C20046D7F5 /* RandomAPIWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BB7C3CF7287133C10046D7F5 /* RandomAPIWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BBA4A63C28714B2800B92649 /* FreeApiRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4A63B28714B2800B92649 /* FreeApiRLM.swift */; };
+		BBA4A63F28714BFE00B92649 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBA4A63E28714BFE00B92649 /* IQKeyboardManagerSwift */; };
+		BBA4A640287158D800B92649 /* FreeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF666C282D135500C68F6A /* FreeApi.swift */; };
+		BBA4A64128715FE500B92649 /* CapsuleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B3283626DE00C68F6A /* CapsuleText.swift */; };
+		BBA4A6422871603B00B92649 /* FontEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66A02834CA7100C68F6A /* FontEx.swift */; };
+		BBA4A6432871691B00B92649 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */; };
+		BBA4A6442871692C00B92649 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6672282D153A00C68F6A /* Constants.swift */; };
 		BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */; };
 		BBA9C8B42838921F00FC6973 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA9C8B62838921F00FC6973 /* Localizable.strings */; };
 		BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6641282D12E100C68F6A /* free_apisApp.swift */; };
@@ -39,7 +51,6 @@
 		BBFF66A62834CE5600C68F6A /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A32834CE5600C68F6A /* Rubik-Bold.ttf */; };
 		BBFF66A72834CE5600C68F6A /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A42834CE5600C68F6A /* Rubik-SemiBold.ttf */; };
 		BBFF66A82834CE5600C68F6A /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */; };
-		BBFF66AE2834DFD600C68F6A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF66AD2834DFD600C68F6A /* IQKeyboardManagerSwift */; };
 		BBFF66B22836233F00C68F6A /* StyleViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */; };
 		BBFF66B4283626DE00C68F6A /* CapsuleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B3283626DE00C68F6A /* CapsuleText.swift */; };
 		BBFF66B9283633FC00C68F6A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B8283633FC00C68F6A /* EmptyView.swift */; };
@@ -47,6 +58,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BB7C3D03287133C20046D7F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBFF6636282D12E100C68F6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB7C3CF6287133C10046D7F5;
+			remoteInfo = RandomAPIWidgetExtension;
+		};
 		BBFF664F282D12E400C68F6A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BBFF6636282D12E100C68F6A /* Project object */;
@@ -63,8 +81,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BB7C3D06287133C20046D7F5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BB7C3D05287133C20046D7F5 /* RandomAPIWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		BB7C3CF7287133C10046D7F5 /* RandomAPIWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RandomAPIWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB7C3CF9287133C10046D7F5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BB7C3CFB287133C10046D7F5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BB7C3CFE287133C10046D7F5 /* RandomAPIWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPIWidget.swift; sourceTree = "<group>"; };
+		BB7C3D00287133C20046D7F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB7C3D02287133C20046D7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBA4A63B28714B2800B92649 /* FreeApiRLM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeApiRLM.swift; sourceTree = "<group>"; };
 		BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterView.swift; sourceTree = "<group>"; };
 		BBA9C8B52838921F00FC6973 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBA9C8B72838927000FC6973 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -105,12 +144,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BB7C3CF4287133C10046D7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB7C3CFC287133C10046D7F5 /* SwiftUI.framework in Frameworks */,
+				BB7C3CFA287133C10046D7F5 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBFF663B282D12E100C68F6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BBFF66972832438200C68F6A /* PopupView in Frameworks */,
-				BBFF66AE2834DFD600C68F6A /* IQKeyboardManagerSwift in Frameworks */,
+				BBA4A63F28714BFE00B92649 /* IQKeyboardManagerSwift in Frameworks */,
 				BBFF6683282E7EC300C68F6A /* RealmSwift in Frameworks */,
 				BBFF6681282E7EC300C68F6A /* Realm in Frameworks */,
 			);
@@ -133,12 +181,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB7C3CF8287133C10046D7F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C3CF9287133C10046D7F5 /* WidgetKit.framework */,
+				BB7C3CFB287133C10046D7F5 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB7C3CFD287133C10046D7F5 /* RandomAPIWidget */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C3CFE287133C10046D7F5 /* RandomAPIWidget.swift */,
+				BB7C3D00287133C20046D7F5 /* Assets.xcassets */,
+				BB7C3D02287133C20046D7F5 /* Info.plist */,
+			);
+			path = RandomAPIWidget;
+			sourceTree = "<group>";
+		};
 		BBFF6635282D12E100C68F6A = {
 			isa = PBXGroup;
 			children = (
 				BBFF6640282D12E100C68F6A /* free-apis */,
 				BBFF6651282D12E400C68F6A /* free-apisTests */,
 				BBFF665B282D12E400C68F6A /* free-apisUITests */,
+				BB7C3CFD287133C10046D7F5 /* RandomAPIWidget */,
+				BB7C3CF8287133C10046D7F5 /* Frameworks */,
 				BBFF663F282D12E100C68F6A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,6 +218,7 @@
 				BBFF663E282D12E100C68F6A /* free-apis.app */,
 				BBFF664E282D12E400C68F6A /* free-apisTests.xctest */,
 				BBFF6658282D12E400C68F6A /* free-apisUITests.xctest */,
+				BB7C3CF7287133C10046D7F5 /* RandomAPIWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				BBFF666C282D135500C68F6A /* FreeApi.swift */,
+				BBA4A63B28714B2800B92649 /* FreeApiRLM.swift */,
 				BBFF6678282D223700C68F6A /* CategoriesWrapper.swift */,
 				BBFF669C2833921F00C68F6A /* WebView.swift */,
 			);
@@ -291,6 +362,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BB7C3CF6287133C10046D7F5 /* RandomAPIWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB7C3D09287133C20046D7F5 /* Build configuration list for PBXNativeTarget "RandomAPIWidgetExtension" */;
+			buildPhases = (
+				BB7C3CF3287133C10046D7F5 /* Sources */,
+				BB7C3CF4287133C10046D7F5 /* Frameworks */,
+				BB7C3CF5287133C10046D7F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RandomAPIWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = RandomAPIWidgetExtension;
+			productReference = BB7C3CF7287133C10046D7F5 /* RandomAPIWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BBFF663D282D12E100C68F6A /* free-apis */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBFF6662282D12E400C68F6A /* Build configuration list for PBXNativeTarget "free-apis" */;
@@ -298,17 +388,19 @@
 				BBFF663A282D12E100C68F6A /* Sources */,
 				BBFF663B282D12E100C68F6A /* Frameworks */,
 				BBFF663C282D12E100C68F6A /* Resources */,
+				BB7C3D06287133C20046D7F5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BB7C3D04287133C20046D7F5 /* PBXTargetDependency */,
 			);
 			name = "free-apis";
 			packageProductDependencies = (
 				BBFF6680282E7EC300C68F6A /* Realm */,
 				BBFF6682282E7EC300C68F6A /* RealmSwift */,
 				BBFF66962832438200C68F6A /* PopupView */,
-				BBFF66AD2834DFD600C68F6A /* IQKeyboardManagerSwift */,
+				BBA4A63E28714BFE00B92649 /* IQKeyboardManagerSwift */,
 			);
 			productName = "free-apis";
 			productReference = BBFF663E282D12E100C68F6A /* free-apis.app */;
@@ -360,6 +452,9 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					BB7C3CF6287133C10046D7F5 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					BBFF663D282D12E100C68F6A = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
@@ -386,7 +481,7 @@
 			packageReferences = (
 				BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */,
 				BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */,
-				BBFF66AC2834DFD600C68F6A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				BBA4A63D28714BFE00B92649 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = BBFF663F282D12E100C68F6A /* Products */;
 			projectDirPath = "";
@@ -395,11 +490,20 @@
 				BBFF663D282D12E100C68F6A /* free-apis */,
 				BBFF664D282D12E400C68F6A /* free-apisTests */,
 				BBFF6657282D12E400C68F6A /* free-apisUITests */,
+				BB7C3CF6287133C10046D7F5 /* RandomAPIWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BB7C3CF5287133C10046D7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB7C3D01287133C20046D7F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBFF663C282D12E100C68F6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,6 +534,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BB7C3CF3287133C10046D7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA4A6432871691B00B92649 /* AppViewModel.swift in Sources */,
+				BBA4A640287158D800B92649 /* FreeApi.swift in Sources */,
+				BB7C3CFF287133C10046D7F5 /* RandomAPIWidget.swift in Sources */,
+				BBA4A64128715FE500B92649 /* CapsuleText.swift in Sources */,
+				BBA4A6422871603B00B92649 /* FontEx.swift in Sources */,
+				BBA4A6442871692C00B92649 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBFF663A282D12E100C68F6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,6 +574,7 @@
 				BBFF66B4283626DE00C68F6A /* CapsuleText.swift in Sources */,
 				BBFF66B9283633FC00C68F6A /* EmptyView.swift in Sources */,
 				BBFF667D282D290700C68F6A /* CategoriesVM.swift in Sources */,
+				BBA4A63C28714B2800B92649 /* FreeApiRLM.swift in Sources */,
 				BBFF66BC283638E600C68F6A /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +599,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BB7C3D04287133C20046D7F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB7C3CF6287133C10046D7F5 /* RandomAPIWidgetExtension */;
+			targetProxy = BB7C3D03287133C20046D7F5 /* PBXContainerItemProxy */;
+		};
 		BBFF6650282D12E400C68F6A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BBFF663D282D12E100C68F6A /* free-apis */;
@@ -506,6 +629,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BB7C3D07287133C20046D7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8797UGY27X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RandomAPIWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RandomAPIWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.petrsedlak.ios.free-apis.RandomAPIWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB7C3D08287133C20046D7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8797UGY27X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RandomAPIWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RandomAPIWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.petrsedlak.ios.free-apis.RandomAPIWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BBFF6660282D12E400C68F6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -625,6 +802,7 @@
 		BBFF6663282D12E400C68F6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -656,6 +834,7 @@
 		BBFF6664282D12E400C68F6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -763,6 +942,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB7C3D09287133C20046D7F5 /* Build configuration list for PBXNativeTarget "RandomAPIWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB7C3D07287133C20046D7F5 /* Debug */,
+				BB7C3D08287133C20046D7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BBFF6639282D12E100C68F6A /* Build configuration list for PBXProject "free-apis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -802,6 +990,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BBA4A63D28714BFE00B92649 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
 		BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -818,17 +1014,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		BBFF66AC2834DFD600C68F6A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BBA4A63E28714BFE00B92649 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBA4A63D28714BFE00B92649 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		BBFF6680282E7EC300C68F6A /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */;
@@ -843,11 +1036,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */;
 			productName = PopupView;
-		};
-		BBFF66AD2834DFD600C68F6A /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBFF66AC2834DFD600C68F6A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
