@@ -66,6 +66,7 @@ struct FreeApiCellView: View {
                             Image(systemName: "heart.fill").foregroundColor(Color(uiColor:.systemGray5))
                         }
                     }.buttonStyle(PlainButtonStyle())
+                        .disabled(rs.apiIsFavorite(freeApi))
                     
                     Spacer()
                     
