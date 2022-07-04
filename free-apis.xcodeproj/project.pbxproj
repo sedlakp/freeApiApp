@@ -20,6 +20,7 @@
 		BBA4A6422871603B00B92649 /* FontEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66A02834CA7100C68F6A /* FontEx.swift */; };
 		BBA4A6432871691B00B92649 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */; };
 		BBA4A6442871692C00B92649 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6672282D153A00C68F6A /* Constants.swift */; };
+		BBA4A649287311C100B92649 /* URLEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4A648287311C100B92649 /* URLEx.swift */; };
 		BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */; };
 		BBA9C8B42838921F00FC6973 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA9C8B62838921F00FC6973 /* Localizable.strings */; };
 		BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6641282D12E100C68F6A /* free_apisApp.swift */; };
@@ -104,6 +105,7 @@
 		BB7C3D00287133C20046D7F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7C3D02287133C20046D7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBA4A63B28714B2800B92649 /* FreeApiRLM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeApiRLM.swift; sourceTree = "<group>"; };
+		BBA4A648287311C100B92649 /* URLEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEx.swift; sourceTree = "<group>"; };
 		BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterView.swift; sourceTree = "<group>"; };
 		BBA9C8B52838921F00FC6973 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBA9C8B72838927000FC6973 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				BBFF6689282FAE5500C68F6A /* RealmService.swift */,
 				BBFF66A02834CA7100C68F6A /* FontEx.swift */,
 				BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */,
+				BBA4A648287311C100B92649 /* URLEx.swift */,
 				BBFF66B52836277400C68F6A /* CustomViews */,
 				BBFF666E282D145900C68F6A /* Screens */,
 				BBFF666B282D133E00C68F6A /* Models */,
@@ -555,6 +558,7 @@
 				BBFF6673282D153A00C68F6A /* Constants.swift in Sources */,
 				BB0F0FDC283CF3C400B3AB12 /* AppViewModel.swift in Sources */,
 				BBFF666D282D135500C68F6A /* FreeApi.swift in Sources */,
+				BBA4A649287311C100B92649 /* URLEx.swift in Sources */,
 				BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */,
 				BBFF66992832562700C68F6A /* FavoriteCellView.swift in Sources */,
 				BBFF6686282E80BA00C68F6A /* FavoriteApisView.swift in Sources */,

@@ -8,10 +8,15 @@
 import SwiftUI
 import IQKeyboardManagerSwift
 
+// bacause it is hashable, it can be used as a tag for TabView
+enum TabIdentifier: Hashable {
+  case categories, apis, favorited, settings
+}
+
 @main
 struct free_apisApp: App {
     
-    @State var selection = 0 //to prevent switch of tab after refresh of a view on a non first tab
+    @State var selection = TabIdentifier.categories //to prevent switch of tab after refresh of a view on a non first tab
     
     @AppStorage("completedOnboarding") private var completedOnboarding = false
     
@@ -39,17 +44,22 @@ struct free_apisApp: App {
                 TabView(selection: $selection) {
                     CategoriesView().tabItem {
                         Label("Categories", systemImage: "list.dash").font(Font.rubik.semiBoldMini)
-                            }.tag(0)
+                    }.tag(TabIdentifier.categories)
                     MainFreeApisView().tabItem {
                         Label("All", systemImage: "figure.wave").font(Font.rubik.semiBoldMini)
-                            }.tag(1)
+                    }.tag(TabIdentifier.apis)
                     FavoriteApisView().tabItem {
                         Label("Favorited", systemImage: "star").font(Font.rubik.semiBoldMini)
-                            }.tag(2)
+                    }.tag(TabIdentifier.favorited)
                     SettingsView().tabItem {
                         Label("Settings", systemImage: "gear").font(Font.rubik.semiBoldMini)
-                            }.tag(3)
+                    }.tag(TabIdentifier.settings)
                 }.accentColor(Color(uiColor: .label))
+                .onOpenURL { url in
+                    print("tab url: \(url)")
+                    guard let tabIdentifier = url.tabIdentifier else { return }
+                    selection = tabIdentifier
+                }
             }
         }
     }

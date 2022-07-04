@@ -66,11 +66,10 @@ struct RandomAPIWidgetEntryView : View {
         switch family {
         case .systemSmall:
             RandomApiView(api: entry.api)
-            // TODO: - open app and show a detail of the api (the cell, but only one as a push from main screen)
-            //.widgetURL(URL(string:"/id=5"))
+                .widgetURL(entry.api.url)
         default:
             RandomApiView(api: entry.api)
-            //.widgetURL(URL(string:"/id=5"))
+                .widgetURL(entry.api.url)
         }
     }
 }

@@ -21,6 +21,14 @@ struct FreeApi: Hashable, Decodable {
     }
     
     static let ExampleApi = FreeApi(API: "Chocolate factories", Description: "Worldwide chocolate factory database", Auth: "oauth", HTTPS: true, Cors: "cors", Link: "somelink.com", Category: "Sweet stuff")
+    
+    var url: URL {
+        var components = URLComponents()
+        components.scheme = "free-apis"
+        components.host = "apis"
+        components.path = "/\(API)"
+        return components.url ?? URL(fileURLWithPath: "noUrlError")
+    }
 }
 
 struct FreeApisWrap: Hashable,Decodable {

@@ -10,6 +10,7 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 * [Reactive programming (Combine)](https://iosapptemplates.com/blog/swiftui/mvvm-combine-swiftui)
 * [App architecture](https://heckj.github.io/swiftui-notes/)
 * [Widgets](https://useyourloaf.com/blog/widgetkit-for-ios-getting-started/)
+* [Handling deeplinks](https://www.donnywals.com/handling-deeplinks-in-ios-14-with-onopenurl/) << This is soooo smart and elegant
 * ...and others
 
 ## App features
@@ -19,7 +20,7 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 * Filtering APIs based on tags (Auth, https, CORS)
 * Favorite APIs (Persisted in a Realm database)
 * Adding and editing notes to favorited APIs
-* Widget that shows a different random public API every day
+* Widget that shows a different random public API every day, tapping on the widget searches for the api in the app
 
 ## App screenshots
 
