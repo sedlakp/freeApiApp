@@ -23,6 +23,12 @@
 		BBA4A649287311C100B92649 /* URLEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4A648287311C100B92649 /* URLEx.swift */; };
 		BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */; };
 		BBA9C8B42838921F00FC6973 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA9C8B62838921F00FC6973 /* Localizable.strings */; };
+		BBC7E3B92874331600E49F0E /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A32834CE5600C68F6A /* Rubik-Bold.ttf */; };
+		BBC7E3BA2874331900E49F0E /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A42834CE5600C68F6A /* Rubik-SemiBold.ttf */; };
+		BBC7E3BB2874331B00E49F0E /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBFF66A52834CE5600C68F6A /* Rubik-Regular.ttf */; };
+		BBCA2E542874302A00C7F4A9 /* StyleViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */; };
+		BBCA2E57287431D000C7F4A9 /* RandomApiViewSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCA2E55287431C700C7F4A9 /* RandomApiViewSmall.swift */; };
+		BBCA2E5A2874321400C7F4A9 /* RandomApiViewMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCA2E582874320B00C7F4A9 /* RandomApiViewMedium.swift */; };
 		BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6641282D12E100C68F6A /* free_apisApp.swift */; };
 		BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6643282D12E100C68F6A /* FreeApisView.swift */; };
 		BBFF6646282D12E400C68F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFF6645282D12E400C68F6A /* Assets.xcassets */; };
@@ -109,6 +115,8 @@
 		BBA9C8B02837C6D700FC6973 /* TagFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFilterView.swift; sourceTree = "<group>"; };
 		BBA9C8B52838921F00FC6973 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBA9C8B72838927000FC6973 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BBCA2E55287431C700C7F4A9 /* RandomApiViewSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomApiViewSmall.swift; sourceTree = "<group>"; };
+		BBCA2E582874320B00C7F4A9 /* RandomApiViewMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomApiViewMedium.swift; sourceTree = "<group>"; };
 		BBFF663E282D12E100C68F6A /* free-apis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-apis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFF6641282D12E100C68F6A /* free_apisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = free_apisApp.swift; sourceTree = "<group>"; };
 		BBFF6643282D12E100C68F6A /* FreeApisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeApisView.swift; sourceTree = "<group>"; };
@@ -196,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				BB7C3CFE287133C10046D7F5 /* RandomAPIWidget.swift */,
+				BBCA2E55287431C700C7F4A9 /* RandomApiViewSmall.swift */,
+				BBCA2E582874320B00C7F4A9 /* RandomApiViewMedium.swift */,
 				BB7C3D00287133C20046D7F5 /* Assets.xcassets */,
 				BB7C3D02287133C20046D7F5 /* Info.plist */,
 			);
@@ -503,7 +513,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC7E3BA2874331900E49F0E /* Rubik-SemiBold.ttf in Resources */,
+				BBC7E3BB2874331B00E49F0E /* Rubik-Regular.ttf in Resources */,
 				BB7C3D01287133C20046D7F5 /* Assets.xcassets in Resources */,
+				BBC7E3B92874331600E49F0E /* Rubik-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +554,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCA2E542874302A00C7F4A9 /* StyleViewModifiers.swift in Sources */,
 				BBA4A6432871691B00B92649 /* AppViewModel.swift in Sources */,
+				BBCA2E5A2874321400C7F4A9 /* RandomApiViewMedium.swift in Sources */,
+				BBCA2E57287431D000C7F4A9 /* RandomApiViewSmall.swift in Sources */,
 				BBA4A640287158D800B92649 /* FreeApi.swift in Sources */,
 				BB7C3CFF287133C10046D7F5 /* RandomAPIWidget.swift in Sources */,
 				BBA4A64128715FE500B92649 /* CapsuleText.swift in Sources */,

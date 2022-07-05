@@ -20,7 +20,7 @@ struct FreeApi: Hashable, Decodable {
         return self.Cors == "yes"
     }
     
-    static let ExampleApi = FreeApi(API: "Chocolate factories", Description: "Worldwide chocolate factory database", Auth: "oauth", HTTPS: true, Cors: "cors", Link: "somelink.com", Category: "Sweet stuff")
+    static let ExampleApi = FreeApi(API: "Chocolate factories", Description: "Worldwide chocolate factory database", Auth: "apiKey", HTTPS: true, Cors: "yes", Link: "somelink.com", Category: "Sweet stuff")
     
     var url: URL {
         var components = URLComponents()

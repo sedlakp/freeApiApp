@@ -65,41 +65,18 @@ struct RandomAPIWidgetEntryView : View {
         // TODO: - Various sizes and designs of the widget
         switch family {
         case .systemSmall:
-            RandomApiView(api: entry.api)
+            RandomApiViewSmall(api: entry.api)
+                .widgetURL(entry.api.url)
+        case .systemMedium:
+            RandomApiViewMedium(api: entry.api)
                 .widgetURL(entry.api.url)
         default:
-            RandomApiView(api: entry.api)
+            RandomApiViewMedium(api: entry.api)
                 .widgetURL(entry.api.url)
         }
     }
 }
 
-struct RandomApiView: View {
-    
-    let api: FreeApi
-    
-    var body: some View {
-        ZStack{
-            VStack(alignment: .center, spacing: 10) {
-                Text(api.API)
-                    .lineLimit(2)
-                    .font(Font.rubik.bold)
-                    .fixedSize(horizontal: false, vertical: true)
-                
-                Divider().padding(.horizontal)
-                
-                CapsuleText(text: api.Category, fixedHorizontally: false)
-                
-                Text(api.Description)
-                    .font(Font.rubik.regular)
-                    .foregroundColor(.gray)
-                    .lineLimit(3)
-                    .fixedSize(horizontal: false, vertical: true)
-                
-            }.padding()
-        }
-    }
-}
 
 // main widget manager
 @main
@@ -112,13 +89,21 @@ struct RandomAPIWidget: Widget {
         }
         .configurationDisplayName("Random API")
         .description("Shows a random public API for your next project. Changes every day.")
+        .supportedFamilies([.systemSmall,.systemMedium])
     }
 }
 
 struct RandomAPIWidget_Previews: PreviewProvider {
     static var previews: some View {
-        RandomAPIWidgetEntryView(entry: RandomApiEntry(date: Date(), api: FreeApi.ExampleApi))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        Group {
+            RandomAPIWidgetEntryView(entry: RandomApiEntry(date: Date(), api: FreeApi.ExampleApi))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            RandomAPIWidgetEntryView(entry: RandomApiEntry(date: Date(), api: FreeApi.ExampleApi))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+            RandomAPIWidgetEntryView(entry: RandomApiEntry(date: Date(), api: FreeApi.ExampleApi))
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
+        }
+        
     }
 }
 
