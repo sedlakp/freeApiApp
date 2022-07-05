@@ -28,5 +28,5 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 |----|-----|------|
 |<img src="/screenshots/IMG_5932.PNG" width="200">|<img src="/screenshots/IMG_5934.PNG" width="200">|<img src="/screenshots/IMG_5933.PNG" width="200">|
 | Widget  |
-|<img src="/screenshots/widget.png" width="200">|
+|<img src="/screenshots/widget.jpeg" width="200">|
 
