@@ -13,15 +13,15 @@ struct RandomApiViewMedium: View {
     
     var body: some View {
         ZStack{
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Text(api.API)
-                        .lineLimit(2)
+                        .lineLimit(1)
                         .font(Font.rubik.bold)
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                     CapsuleText(text: api.Category)
-                }
+                }.padding(.bottom, 8)
                 
                 Divider()//.padding(.horizontal)
                 
@@ -40,7 +40,7 @@ struct RandomApiViewMedium: View {
                         Text("CORS")
                             .tagText(tagBackground: .brown, tagTextColor: .white)
                     }
-                }
+                }.padding(.vertical, 8)
                 
                 Text(api.Description)
                     .font(Font.rubik.regular)
@@ -48,8 +48,10 @@ struct RandomApiViewMedium: View {
                     .lineLimit(3)
                     .fixedSize(horizontal: false, vertical: true)
                 Spacer()
-            }.padding()
-        }
+            }.padding(EdgeInsets(top: 16, leading: 16, bottom: 8, trailing: 16))
+                .background(ContainerRelativeShape().fill(Color(uiColor: .systemBackground)))
+        }.padding(4.0)
+           .background(Color(uiColor: .systemGray3))
     }
 }
 
