@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 // provider supplies entries (time and data) to be shown in a widget view at a specific time and events(e.g. preview, normal widget state, placeholder when things are loading)
-struct Provider: TimelineProvider {
+struct RandomApiProvider: TimelineProvider {
     
     let vm = RandomApiWidgetVM()
     
@@ -77,14 +77,11 @@ struct RandomAPIWidgetEntryView : View {
     }
 }
 
-
-// main widget manager
-@main
 struct RandomAPIWidget: Widget {
     let kind: String = "RandomAPIWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: RandomApiProvider()) { entry in
             RandomAPIWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Random API")

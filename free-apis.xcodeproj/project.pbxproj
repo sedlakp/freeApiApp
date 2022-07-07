@@ -29,6 +29,11 @@
 		BBCA2E542874302A00C7F4A9 /* StyleViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */; };
 		BBCA2E57287431D000C7F4A9 /* RandomApiViewSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCA2E55287431C700C7F4A9 /* RandomApiViewSmall.swift */; };
 		BBCA2E5A2874321400C7F4A9 /* RandomApiViewMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCA2E582874320B00C7F4A9 /* RandomApiViewMedium.swift */; };
+		BBDFB39E28759836006A1DC9 /* FavoritedWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB39D28759836006A1DC9 /* FavoritedWidget.swift */; };
+		BBDFB3A028759863006A1DC9 /* ApiWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB39F28759863006A1DC9 /* ApiWidgetBundle.swift */; };
+		BBDFB3A428759E5C006A1DC9 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB3A328759E5C006A1DC9 /* AppGroup.swift */; };
+		BBDFB3A52876FAF7006A1DC9 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB3A328759E5C006A1DC9 /* AppGroup.swift */; };
+		BBDFB3A728770F44006A1DC9 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB3A628770F44006A1DC9 /* ArrayEx.swift */; };
 		BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6641282D12E100C68F6A /* free_apisApp.swift */; };
 		BBFF6644282D12E100C68F6A /* FreeApisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6643282D12E100C68F6A /* FreeApisView.swift */; };
 		BBFF6646282D12E400C68F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFF6645282D12E400C68F6A /* Assets.xcassets */; };
@@ -117,6 +122,12 @@
 		BBA9C8B72838927000FC6973 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBCA2E55287431C700C7F4A9 /* RandomApiViewSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomApiViewSmall.swift; sourceTree = "<group>"; };
 		BBCA2E582874320B00C7F4A9 /* RandomApiViewMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomApiViewMedium.swift; sourceTree = "<group>"; };
+		BBDFB39D28759836006A1DC9 /* FavoritedWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedWidget.swift; sourceTree = "<group>"; };
+		BBDFB39F28759863006A1DC9 /* ApiWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWidgetBundle.swift; sourceTree = "<group>"; };
+		BBDFB3A128759D75006A1DC9 /* free-apis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "free-apis.entitlements"; sourceTree = "<group>"; };
+		BBDFB3A228759DCF006A1DC9 /* RandomAPIWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RandomAPIWidgetExtension.entitlements; sourceTree = "<group>"; };
+		BBDFB3A328759E5C006A1DC9 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		BBDFB3A628770F44006A1DC9 /* ArrayEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
 		BBFF663E282D12E100C68F6A /* free-apis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-apis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFF6641282D12E100C68F6A /* free_apisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = free_apisApp.swift; sourceTree = "<group>"; };
 		BBFF6643282D12E100C68F6A /* FreeApisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeApisView.swift; sourceTree = "<group>"; };
@@ -204,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				BB7C3CFE287133C10046D7F5 /* RandomAPIWidget.swift */,
+				BBDFB39F28759863006A1DC9 /* ApiWidgetBundle.swift */,
+				BBDFB39D28759836006A1DC9 /* FavoritedWidget.swift */,
 				BBCA2E55287431C700C7F4A9 /* RandomApiViewSmall.swift */,
 				BBCA2E582874320B00C7F4A9 /* RandomApiViewMedium.swift */,
 				BB7C3D00287133C20046D7F5 /* Assets.xcassets */,
@@ -215,6 +228,7 @@
 		BBFF6635282D12E100C68F6A = {
 			isa = PBXGroup;
 			children = (
+				BBDFB3A228759DCF006A1DC9 /* RandomAPIWidgetExtension.entitlements */,
 				BBFF6640282D12E100C68F6A /* free-apis */,
 				BBFF6651282D12E400C68F6A /* free-apisTests */,
 				BBFF665B282D12E400C68F6A /* free-apisUITests */,
@@ -238,13 +252,16 @@
 		BBFF6640282D12E100C68F6A /* free-apis */ = {
 			isa = PBXGroup;
 			children = (
+				BBDFB3A128759D75006A1DC9 /* free-apis.entitlements */,
 				BBFF669428323D8900C68F6A /* Info.plist */,
 				BBA9C8B62838921F00FC6973 /* Localizable.strings */,
 				BBFF6641282D12E100C68F6A /* free_apisApp.swift */,
+				BBDFB3A328759E5C006A1DC9 /* AppGroup.swift */,
 				BBFF6672282D153A00C68F6A /* Constants.swift */,
 				BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */,
 				BBFF6689282FAE5500C68F6A /* RealmService.swift */,
 				BBFF66A02834CA7100C68F6A /* FontEx.swift */,
+				BBDFB3A628770F44006A1DC9 /* ArrayEx.swift */,
 				BBFF66B12836233F00C68F6A /* StyleViewModifiers.swift */,
 				BBA4A648287311C100B92649 /* URLEx.swift */,
 				BBFF66B52836277400C68F6A /* CustomViews */,
@@ -556,9 +573,12 @@
 			files = (
 				BBCA2E542874302A00C7F4A9 /* StyleViewModifiers.swift in Sources */,
 				BBA4A6432871691B00B92649 /* AppViewModel.swift in Sources */,
+				BBDFB39E28759836006A1DC9 /* FavoritedWidget.swift in Sources */,
 				BBCA2E5A2874321400C7F4A9 /* RandomApiViewMedium.swift in Sources */,
 				BBCA2E57287431D000C7F4A9 /* RandomApiViewSmall.swift in Sources */,
 				BBA4A640287158D800B92649 /* FreeApi.swift in Sources */,
+				BBDFB3A028759863006A1DC9 /* ApiWidgetBundle.swift in Sources */,
+				BBDFB3A52876FAF7006A1DC9 /* AppGroup.swift in Sources */,
 				BB7C3CFF287133C10046D7F5 /* RandomAPIWidget.swift in Sources */,
 				BBA4A64128715FE500B92649 /* CapsuleText.swift in Sources */,
 				BBA4A6422871603B00B92649 /* FontEx.swift in Sources */,
@@ -578,6 +598,7 @@
 				BBA9C8B12837C6D700FC6973 /* TagFilterView.swift in Sources */,
 				BBFF66992832562700C68F6A /* FavoriteCellView.swift in Sources */,
 				BBFF6686282E80BA00C68F6A /* FavoriteApisView.swift in Sources */,
+				BBDFB3A728770F44006A1DC9 /* ArrayEx.swift in Sources */,
 				BBFF6688282E80CB00C68F6A /* FavoriteApisVM.swift in Sources */,
 				BBFF6671282D147A00C68F6A /* FreeApisVM.swift in Sources */,
 				BBFF66B22836233F00C68F6A /* StyleViewModifiers.swift in Sources */,
@@ -592,6 +613,7 @@
 				BBFF6642282D12E100C68F6A /* free_apisApp.swift in Sources */,
 				BBFF669B28338F6800C68F6A /* PopupAddToFavsView.swift in Sources */,
 				BBFF66B4283626DE00C68F6A /* CapsuleText.swift in Sources */,
+				BBDFB3A428759E5C006A1DC9 /* AppGroup.swift in Sources */,
 				BBFF66B9283633FC00C68F6A /* EmptyView.swift in Sources */,
 				BBFF667D282D290700C68F6A /* CategoriesVM.swift in Sources */,
 				BBA4A63C28714B2800B92649 /* FreeApiRLM.swift in Sources */,
@@ -654,6 +676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RandomAPIWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8797UGY27X;
@@ -681,6 +704,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RandomAPIWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8797UGY27X;
@@ -825,6 +849,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "free-apis/free-apis.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"free-apis/Preview Content\"";
@@ -857,6 +882,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "free-apis/free-apis.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"free-apis/Preview Content\"";

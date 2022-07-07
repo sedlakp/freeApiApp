@@ -20,6 +20,7 @@ extension Font {
         let semiBoldSmall = Font.custom("Rubik-SemiBold", size: 10)
         let bold = Font.custom("Rubik-Bold", size: 14)
         let boldBig = Font.custom("Rubik-Bold", size: 28)
+        let semiBoldWidget = Font.custom("Rubik-SemiBold", size: 20)
     }
 }
 

@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 import SwiftUI
+import WidgetKit
 
 struct RealmService: DynamicProperty {
     
@@ -17,6 +18,9 @@ struct RealmService: DynamicProperty {
     
     func unFavorite(at index: IndexSet) {
         $favoritedAPIs.remove(atOffsets: index)
+        AppGroup.apiWidget.userDefaults.set(favoritedAPIs.count, forKey: AppGroup.DefaultsKeys.favoritedCount.rawValue)
+        AppGroup.apiWidget.userDefaults.set(Array(favoritedAPIs).map{$0.Category}.mostFrequent()?.value, forKey: AppGroup.DefaultsKeys.topCategory.rawValue)
+        WidgetCenter.shared.reloadTimelines(ofKind: "FavoritedAPIWidget")
     }
     
     func apiIsFavorite(_ api: FreeApi) -> Bool {
@@ -26,17 +30,22 @@ struct RealmService: DynamicProperty {
     
     func addToFavorites(_ api: FreeApi, _ noteText: String) {
         // check if the thing is already in favorites
-        
         if !apiIsFavorite(api) {
             
             let rlmApi = api.toRLM()
             rlmApi.noteText = noteText
             $favoritedAPIs.append(rlmApi)
         }
-        
+        AppGroup.apiWidget.userDefaults.set(favoritedAPIs.count, forKey: AppGroup.DefaultsKeys.favoritedCount.rawValue)
+        AppGroup.apiWidget.userDefaults.set(Array(favoritedAPIs).map{$0.Category}.mostFrequent()?.value, forKey: AppGroup.DefaultsKeys.topCategory.rawValue)
+        WidgetCenter.shared.reloadTimelines(ofKind: "FavoritedAPIWidget")
     }
     
     func deleteEverything() {
+        
+        AppGroup.apiWidget.resetUserDefaults()
+        WidgetCenter.shared.reloadTimelines(ofKind: "FavoritedAPIWidget")
+        
         try! realm.write {
             realm.deleteAll()
         }

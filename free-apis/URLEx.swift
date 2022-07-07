@@ -24,6 +24,7 @@ extension URL {
         switch host {
             case "apis": return .apis
             case "categories": return .categories // matches my-url-scheme://categories/
+            case "favorited": return .favorited
             case "settings": return .settings // matches my-url-scheme://settings/
             default: return nil
         }
