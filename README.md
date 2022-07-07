@@ -21,6 +21,7 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 * Favorite APIs (Persisted in a Realm database)
 * Adding and editing notes to favorited APIs
 * Widget that shows a different random public API every day, tapping on the widget searches for the api in the app
+* Widget that shows number of favorited APIs and most commonly favorited category
 
 ## App screenshots
 
@@ -28,5 +29,5 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 |----|-----|------|
 |<img src="/screenshots/IMG_5932.PNG" width="200">|<img src="/screenshots/IMG_5934.PNG" width="200">|<img src="/screenshots/IMG_5933.PNG" width="200">|
 | Widget  |
-|<img src="/screenshots/widget.jpeg" width="200">|
+|<img src="/screenshots/widget.png" width="200">|
 
