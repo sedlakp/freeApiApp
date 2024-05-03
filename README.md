@@ -1,3 +1,6 @@
+# 🗑️ ❗️DEPRECATED PROJECT
+I used content provided from `https://api.publicapis.org` in this app. The api does not work anymore and I did not find any replacement. 
+
 # Public API list app
 I am using this project to learn SwiftUI and to refresh and improve my Swift knowledge.
 
@@ -10,7 +13,7 @@ I am using this project to learn SwiftUI and to refresh and improve my Swift kno
 * [Reactive programming (Combine)](https://iosapptemplates.com/blog/swiftui/mvvm-combine-swiftui)
 * [App architecture](https://heckj.github.io/swiftui-notes/)
 * [Widgets](https://useyourloaf.com/blog/widgetkit-for-ios-getting-started/)
-* [Handling deeplinks](https://www.donnywals.com/handling-deeplinks-in-ios-14-with-onopenurl/) << This is soooo smart and elegant
+* [Handling deeplinks](https://www.donnywals.com/handling-deeplinks-in-ios-14-with-onopenurl/)
 * ...and others
 
 ## App features
