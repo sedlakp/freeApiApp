@@ -18,7 +18,7 @@ struct TagFilterView: View {
     var body: some View {
         NavigationView {
             List(FilterTags.allCases, id: \.self) { tagName in
-                if selectedTags.contains{ $0 == tagName} {
+                if selectedTags.contains(where: { $0 == tagName}) {
                     Button {
                         selectedTags.remove(tagName)
                     } label: {

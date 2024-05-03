@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB0F0FDC283CF3C400B3AB12 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0F0FDB283CF3C400B3AB12 /* AppViewModel.swift */; };
+		BB18667A2BE50C320008B6D2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BB1866792BE50C320008B6D2 /* RealmSwift */; };
 		BB7C3CFA287133C10046D7F5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7C3CF9287133C10046D7F5 /* WidgetKit.framework */; };
 		BB7C3CFC287133C10046D7F5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7C3CFB287133C10046D7F5 /* SwiftUI.framework */; };
 		BB7C3CFF287133C10046D7F5 /* RandomAPIWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C3CFE287133C10046D7F5 /* RandomAPIWidget.swift */; };
@@ -48,8 +49,6 @@
 		BBFF6679282D223700C68F6A /* CategoriesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6678282D223700C68F6A /* CategoriesWrapper.swift */; };
 		BBFF667B282D28FB00C68F6A /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF667A282D28FB00C68F6A /* CategoriesView.swift */; };
 		BBFF667D282D290700C68F6A /* CategoriesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF667C282D290700C68F6A /* CategoriesVM.swift */; };
-		BBFF6681282E7EC300C68F6A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF6680282E7EC300C68F6A /* Realm */; };
-		BBFF6683282E7EC300C68F6A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBFF6682282E7EC300C68F6A /* RealmSwift */; };
 		BBFF6686282E80BA00C68F6A /* FavoriteApisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6685282E80BA00C68F6A /* FavoriteApisView.swift */; };
 		BBFF6688282E80CB00C68F6A /* FavoriteApisVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6687282E80CB00C68F6A /* FavoriteApisVM.swift */; };
 		BBFF668A282FAE5500C68F6A /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFF6689282FAE5500C68F6A /* RealmService.swift */; };
@@ -178,10 +177,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB18667A2BE50C320008B6D2 /* RealmSwift in Frameworks */,
 				BBFF66972832438200C68F6A /* PopupView in Frameworks */,
 				BBA4A63F28714BFE00B92649 /* IQKeyboardManagerSwift in Frameworks */,
-				BBFF6683282E7EC300C68F6A /* RealmSwift in Frameworks */,
-				BBFF6681282E7EC300C68F6A /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,10 +425,9 @@
 			);
 			name = "free-apis";
 			packageProductDependencies = (
-				BBFF6680282E7EC300C68F6A /* Realm */,
-				BBFF6682282E7EC300C68F6A /* RealmSwift */,
 				BBFF66962832438200C68F6A /* PopupView */,
 				BBA4A63E28714BFE00B92649 /* IQKeyboardManagerSwift */,
+				BB1866792BE50C320008B6D2 /* RealmSwift */,
 			);
 			productName = "free-apis";
 			productReference = BBFF663E282D12E100C68F6A /* free-apis.app */;
@@ -509,9 +506,9 @@
 			);
 			mainGroup = BBFF6635282D12E100C68F6A;
 			packageReferences = (
-				BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */,
 				BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */,
 				BBA4A63D28714BFE00B92649 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				BB1866782BE50C320008B6D2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = BBFF663F282D12E100C68F6A /* Products */;
 			projectDirPath = "";
@@ -1036,20 +1033,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BB1866782BE50C320008B6D2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.50.0;
+			};
+		};
 		BBA4A63D28714BFE00B92649 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
 				kind = exactVersion;
 				version = 6.5.0;
-			};
-		};
-		BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.26.0;
 			};
 		};
 		BBFF66952832438200C68F6A /* XCRemoteSwiftPackageReference "PopupView" */ = {
@@ -1063,20 +1060,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BB1866792BE50C320008B6D2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB1866782BE50C320008B6D2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		BBA4A63E28714BFE00B92649 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BBA4A63D28714BFE00B92649 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
-		};
-		BBFF6680282E7EC300C68F6A /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		BBFF6682282E7EC300C68F6A /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBFF667F282E7EC300C68F6A /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
 		};
 		BBFF66962832438200C68F6A /* PopupView */ = {
 			isa = XCSwiftPackageProductDependency;
